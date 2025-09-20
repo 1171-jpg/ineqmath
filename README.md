@@ -79,6 +79,7 @@ Welcome to the official repository for the paper "[Solving Inequality Proofs wit
 <a id="news"></a>
 ## 💥 News 
 
+- **[2025.09.18]** 🎉 Excited to announce that our **IneqMath** paper has been **accepted at NeurIPS 2025 as a Spotlight** <span style="color:red;">(Top 3% of all submissions)</span>! 
 - **[2025.08.18]** 🎯 We've just released our novel **reformulation pipeline** that transforms inequality proofs into **informal yet verifiable subtasks**. Plus, our brand-new **training data enhancement scripts** are here to supercharge your model training. Check out our [Data Curation](#data-curation) section and start building better data and models today! ✨
 - **[2025.08.17]** 🚀 Supercharge your IneqMath runs with our new improvement strategies—[Frequent Theorems as Hints](#frequent-theorems-as-hints), [Frequent Training Problems & Solutions as Hints](#frequent-training-problems-and-solutions-as-hints), and [Few-shot Evaluation](#few-shot-evaluation). Give them a try and let us know if there are other strategies you'd like to see!
 - **[2025.08.16]** 🚀 Updated **example scripts** across **all supported model families**—explore them [here](#supported-llm-engines)!
