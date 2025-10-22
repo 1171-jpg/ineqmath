@@ -25,7 +25,7 @@
 [![Hugging Face Dataset](https://img.shields.io/badge/Huggingface-Dataset-FFD21E.svg?logo=huggingface)](https://huggingface.co/datasets/AI4Math/IneqMath)
 </br>
 [![Website](https://img.shields.io/badge/Website-IneqMath-2176BC?logo=GoogleChrome)](https://ineqmath.github.io/)
-[![Leaderboard](https://img.shields.io/badge/Leaderboard-IneqMath-FFD21E?logo=Hoppscotch)](https://huggingface.co/spaces/AI4Math/IneqMath-Leaderboard)
+[![Leaderboard](https://img.shields.io/badge/Leaderboard-IneqMath-FFD21E?logo=Hoppscotch)](https://ineqmath.github.io/#leaderboard)
 [![Visualization](https://img.shields.io/badge/Visualization-IneqMath-D03C36?logo=Vega)](https://ineqmath.github.io/#visualization)
 [![Coverage](https://img.shields.io/badge/Coverage-IneqMath-2176BC.svg?logo=x)](https://x.com/lupantech/status/1932866286427779586)
 
@@ -54,7 +54,7 @@ Welcome to the official repository for the paper "[Solving Inequality Proofs wit
   - [Evaluate Models on IneqMath Test Set](#evaluate-models-on-ineqmath-test-set)
   - [Evaluate Models on IneqMath Dev Set](#evaluate-models-on-ineqmath-dev-set)
   - [Evaluate with the Final Answer Judge](#evaluate-with-the-final-answer-judge)
-  - [Submit the Results to the Leaderboard](#submit-the-results-to-the-leaderboard)
+  - [Submit the Results to the Evaluation Platform](#submit-the-results-to-the-evaluation-platform)
 - [🎯 Strategies on IneqMath](#strategies-on-ineqmath)
   - [Frequent Theorems as Hints](#frequent-theorems-as-hints)
   - [Frequent Training Problems and Solutions as Hints](#frequent-training-problems-and-solutions-as-hints)
@@ -123,8 +123,6 @@ Testing examples of <b><span style="color:#103756;">Ineq</span><span style="colo
 <a id="leaderboard"></a>
 ## 🏆 Leaderboard
 The leaderboard of chat and reasoning LLMs on the <b><span style="color:#103756;">Ineq</span><span style="color:#D03C36;">Math</span></b> benchmark (the test set) is shown below. 
-
-The interactive leaderboard for the <b><span style="color:#103756;">Ineq</span><span style="color:#D03C36;">Math</span></b> is available [here](https://huggingface.co/spaces/AI4Math/IneqMath-Leaderboard).
 
 | **Rank** | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Model**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;**Size**&nbsp;&nbsp;&nbsp; | **Type** | **Source** | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Date**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Overall Acc ↓** | **Answer Acc** | **Step Acc (NTC)** | **Step Acc (NLG)** | **Step Acc (NAE)** | **Step Acc (NCE)** |
 |------|-------|------|------|--------|------|-------------|------------|----------------|----------------|----------------|----------------|
@@ -265,7 +263,7 @@ wget https://huggingface.co/datasets/AI4Math/IneqMath/resolve/main/json/test.jso
 Then, you can find the model's output in `results/models_results_test_data/MODEL-LABEL/scores.json`, where `MODEL-LABEL` is the label of the model consisting of the model name and the max tokens budget. For example, the `MODEL-LABEL` for `gpt-4o-mini` with a 10K max tokens limit would be `gpt-4o-mini_tokens_10000`.
 
 
-To evaluate your model's output and obtain the answer accuracy and step-wise accuracy reported in our paper, please submit your outputs to the [leaderboard](https://huggingface.co/spaces/AI4Math/IneqMath-Leaderboard). See [the leaderboard submission instructions](#submit-the-results-to-the-leaderboard) for more details.
+To evaluate your model's output and obtain the answer accuracy and step-wise accuracy reported in our paper, please submit your outputs to the [evaluation platform](https://huggingface.co/spaces/AI4Math/IneqMath-Leaderboard). See [the evaluation platform submission instructions](#submit-the-results-to-the-evaluation-platform) for more details.
 
 
 ### Evaluate Models on <b><span style="color:#103756;">Ineq</span><span style="color:#D03C36;">Math</span></b> Dev Set
@@ -287,7 +285,7 @@ wget https://huggingface.co/datasets/AI4Math/IneqMath/resolve/main/json/dev.json
 
 You can then find the answer accuracy in `results/models_results_dev_data/MODEL-LABEL/scores.json` and model's output in `results/models_results_dev_data/MODEL-LABEL/results.json`, where `MODEL-LABEL` is the label of the model consisting of the model name and the max tokens budget. For example, the `MODEL-LABEL` for `gpt-4o-mini` with a 10K max tokens limit would be `gpt-4o-mini_tokens_10000`.
 
-To further evaluate your model's output and obtain the step-wise accuracy reported in our paper, please submit your generated file `results/models_results_dev_data/MODEL-LABEL/results.json` to the [Dev set evaluation platform](https://huggingface.co/spaces/AI4Math/IneqMath-Dev-Evaluation). See [the leaderboard submission instructions](#submit-the-results-to-the-leaderboard) for more details. 
+To further evaluate your model's output and obtain the step-wise accuracy reported in our paper, please submit your generated file `results/models_results_dev_data/MODEL-LABEL/results.json` to the [Dev set evaluation platform](https://huggingface.co/spaces/AI4Math/IneqMath-Dev-Evaluation). See [the evaluation platform submission instructions](#submit-the-results-to-the-evaluation-platform) for more details. 
 
 ### Evaluate with the Final Answer Judge
 
@@ -316,12 +314,12 @@ python compute_score.py \
 The score will be saved as `../../results/models_results_dev_data/gpt-4o-mini_tokens_10000/scores.json` in the same directory as `--results_file`. 
 
 
-### Submit the Results to the Leaderboard
-🏆 The leaderboard for the <b><span style="color:#103756;">Ineq</span><span style="color:#D03C36;">Math</span></b> is available [here](https://huggingface.co/spaces/AI4Math/IneqMath-Leaderboard).
+### Submit the Results to the Evaluation Platform
+🏆 The evaluation platform for the <b><span style="color:#103756;">Ineq</span><span style="color:#D03C36;">Math</span></b> is available [here](https://huggingface.co/spaces/AI4Math/IneqMath-Leaderboard).
 
-To submit the results to the leaderboard, and get the answer accuracy and step-wise accuracy reported in our paper, please follow the following instructions: 
+To submit the results to the evaluation platform, and get the answer accuracy and step-wise accuracy reported in our paper, please follow the following instructions: 
 
-- If you run the model by our scripts, you can upload the generated `results.json` of the model to the corresponding section (test/dev) of the leaderboard.
+- If you run the model by our scripts, you can upload the generated `results.json` of the model to the corresponding section (test/dev) of the evaluation platform.
 
 - If you run the model on your own, please check your data format before your submission. The submitted data should be compiled in a single `JSON` file with at least five keys listed below:
 
@@ -361,7 +359,7 @@ Then, you can find the model's output in `results/frequent_theorems_as_hints_res
 
 We have provided the results generated by `gpt-4o-mini` with 3 most frequent theorems as hints and 10,000 max tokens limit [here](results/frequent_theorems_as_hints_results_test_data/gpt-4o-mini_tokens_10000_theorem_num_3/results.json). We also visualize the query and response pairs in markdown format [here](results/frequent_theorems_as_hints_results_test_data/gpt-4o-mini_tokens_10000_theorem_num_3/raw) for each problem. (For example, the visualization of problem 1 is [here](results/frequent_theorems_as_hints_results_test_data/gpt-4o-mini_tokens_10000_theorem_num_3/raw/1.md))
 
-To evaluate your model's output and obtain the answer accuracy and step-wise accuracy reported in our paper, please submit your outputs to the [leaderboard](https://huggingface.co/spaces/AI4Math/IneqMath-Leaderboard). See [the leaderboard submission instructions](#submit-the-results-to-the-leaderboard) for more details.
+To evaluate your model's output and obtain the answer accuracy and step-wise accuracy reported in our paper, please submit your outputs to the [evaluation platform](https://huggingface.co/spaces/AI4Math/IneqMath-Leaderboard). See [the evaluation platform submission instructions](#submit-the-results-to-the-evaluation-platform) for more details.
 
 </details>
 
@@ -387,7 +385,7 @@ Then, you can find the model's output in `results/frequent_solution_as_hints_res
 
 We have provided the results generated by `gpt-4o-mini` with 3 most frequent training problems and solutions as hints and 10,000 max tokens limit [here](results/frequent_solution_as_hints_results_test_data/gpt-4o-mini_tokens_10000_solution_num_3/results.json). We also visualize the query and response pairs in markdown format [here](results/frequent_solution_as_hints_results_test_data/gpt-4o-mini_tokens_10000_solution_num_3/raw) for each problem. (For example, the visualization of problem 1 is [here](results/frequent_solution_as_hints_results_test_data/gpt-4o-mini_tokens_10000_solution_num_3/raw/1.md))
 
-To evaluate your model's output and obtain the answer accuracy and step-wise accuracy reported in our paper, please submit your outputs to the [leaderboard](https://huggingface.co/spaces/AI4Math/IneqMath-Leaderboard). See [the leaderboard submission instructions](#submit-the-results-to-the-leaderboard) for more details.
+To evaluate your model's output and obtain the answer accuracy and step-wise accuracy reported in our paper, please submit your outputs to the [evaluation platform](https://huggingface.co/spaces/AI4Math/IneqMath-Leaderboard). See [the evaluation platform submission instructions](#submit-the-results-to-the-evaluation-platform) for more details.
 
 </details>
 
@@ -414,7 +412,7 @@ Then, you can find the model's output in `results/few_shot_results_dev_data/MODE
 
 We have provided the results generated by `gpt-4o-mini` with 3-shot examples and 10,000 max tokens limit [here](results/few_shot_results_test_data/gpt-4o-mini_tokens_10000_shot_num_3/results.json). We also visualize the query and response pairs in markdown format [here](results/few_shot_results_test_data/gpt-4o-mini_tokens_10000_shot_num_3/raw) for each problem. (For example, the visualization of problem 1 is [here](results/few_shot_results_test_data/gpt-4o-mini_tokens_10000_shot_num_3/raw/1.md))
 
-To evaluate your model's output and obtain the answer accuracy and step-wise accuracy reported in our paper, please submit your outputs to the [leaderboard](https://huggingface.co/spaces/AI4Math/IneqMath-Leaderboard). See [the leaderboard submission instructions](#submit-the-results-to-the-leaderboard) for more details.
+To evaluate your model's output and obtain the answer accuracy and step-wise accuracy reported in our paper, please submit your outputs to the [evaluation platform](https://huggingface.co/spaces/AI4Math/IneqMath-Leaderboard). See [the evaluation platform submission instructions](#submit-the-results-to-the-evaluation-platform) for more details.
 
 </details>
 
