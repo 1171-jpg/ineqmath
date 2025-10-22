@@ -24,7 +24,7 @@
 [![HF Paper](https://img.shields.io/badge/Huggingface-Paper-FFD21E.svg?logo=huggingface)](https://huggingface.co/papers/2506.07927)
 [![Hugging Face Dataset](https://img.shields.io/badge/Huggingface-Dataset-FFD21E.svg?logo=huggingface)](https://huggingface.co/datasets/AI4Math/IneqMath)
 </br>
-[![Evaluation Platform](https://img.shields.io/badge/Evaluation-Platform-FFD21E.svg?logo=huggingface)](https://huggingface.co/papers/2506.07927)
+[![Evaluation Platform](https://img.shields.io/badge/Evaluation-Platform-FFD21E.svg?logo=huggingface)](https://huggingface.co/spaces/AI4Math/IneqMath-Leaderboard)
 [![Website](https://img.shields.io/badge/Website-IneqMath-2176BC?logo=GoogleChrome)](https://ineqmath.github.io/)
 [![Leaderboard](https://img.shields.io/badge/Leaderboard-IneqMath-FFD21E?logo=Hoppscotch)](https://ineqmath.github.io/#leaderboard)
 [![Visualization](https://img.shields.io/badge/Visualization-IneqMath-D03C36?logo=Vega)](https://ineqmath.github.io/#visualization)
