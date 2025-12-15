@@ -692,9 +692,9 @@ The copyright of the images and the questions belongs to the original authors. A
 If you use the <b><span style="color:#103756;">Ineq</span><span style="color:#D03C36;">Math</span></b> dataset in your work, please kindly cite the paper using this BibTeX:
 
 ```
-@inproceedings{sheng2025solving,
+@inproceedings{lu2025solving,
   title={Solving Inequality Proofs with Large Language Models},
-  author={Sheng, Jiayi and Lyu, Luna and Jin, Jikai and Xia, Tony and Gu, Alex and Zou, James and Lu, Pan},
+  author={Lu, Pan and Sheng, Jiayi and Lyu, Luna and Jin, Jikai and Xia, Tony and Gu, Alex and Zou, James},
   booktitle={The 39th Conference on Neural Information Processing Systems (NeurIPS)},
   year={2025}
 }
