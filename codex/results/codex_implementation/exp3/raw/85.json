@@ -1,0 +1,22 @@
+{
+    "data_id": "85",
+    "problem": "Let $a, b, c \\in \\mathbb{R}^{+}$ be positive real numbers. Consider the following inequality:\n$$\n\\frac{a}{\\sqrt{a^2+b^2}} + \\frac{b}{\\sqrt{2b^2+c^2}} + \\frac{c}{\\sqrt{3c^2+a^2}} \\quad () \\quad \\frac{3 \\sqrt{2}}{2}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(D) $<$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c \\in \\mathbb{R}^{+}$ be positive real numbers. Consider the following inequality:\n$$\n\\frac{a}{\\sqrt{a^2+b^2}} + \\frac{b}{\\sqrt{2b^2+c^2}} + \\frac{c}{\\sqrt{3c^2+a^2}} \\quad () \\quad \\frac{3 \\sqrt{2}}{2}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the inequality \n\n\\[\n\\frac{a}{\\sqrt{a^2+b^2}} + \\frac{b}{\\sqrt{2b^2+c^2}} + \\frac{c}{\\sqrt{3c^2+a^2}} \\quad () \\quad \\frac{3 \\sqrt{2}}{2},\n\\]\n\nlet's analyze each term: \n\n1. **Analyze the first term:**\n   \\[\n   \\frac{a}{\\sqrt{a^2+b^2}} \\leq 1 \\quad \\text{(since \\(a^2 + b^2 > a^2\\))}\n   \\]\n\n2. **Analyze the second term:**\n   \\[\n   \\frac{b}{\\sqrt{2b^2+c^2}} \\leq \\frac{b}{\\sqrt{2b^2}} = \\frac{1}{\\sqrt{2}}\n   \\]\n\n3. **Analyze the third term:**\n   \\[\n   \\frac{c}{\\sqrt{3c^2+a^2}} \\leq \\frac{c}{\\sqrt{3c^2}} = \\frac{1}{\\sqrt{3}}\n   \\]\n\nNext, we sum the upper bounds:\n\n\\[\n\\frac{a}{\\sqrt{a^2+b^2}} + \\frac{b}{\\sqrt{2b^2+c^2}} + \\frac{c}{\\sqrt{3c^2+a^2}} \\leq 1 + \\frac{1}{\\sqrt{2}} + \\frac{1}{\\sqrt{3}}.\n\\]\n\nNow let's estimate this upper bound. Using \\( \\sqrt{2} \\approx 1.414 \\) and \\( \\sqrt{3} \\approx 1.732 \\):\n\n\\[\n1 + \\frac{1}{\\sqrt{2}} \\approx 1 + 0.707 \\approx 1.707,\n\\]\n\\[\n\\frac{1}{\\sqrt{3}} \\approx 0.577.\n\\]\n\nAdding them together:\n\n\\[\n1.707 + 0.577 \\approx 2.284.\n\\]\n\nNow we compare this value to \\( \\frac{3\\sqrt{2}}{2} \\):\n\nCalculating \\( \\frac{3\\sqrt{2}}{2} \\approx \\frac{3 \\times 1.414}{2} \\approx 2.121 \\).\n\nSince \n\n\\[\n2.284 > 2.121,\n\\]\n\nit suggests that \n\n\\[\n\\frac{a}{\\sqrt{a^2+b^2}} + \\frac{b}{\\sqrt{2b^2+c^2}} + \\frac{c}{\\sqrt{3c^2+a^2}} > \\frac{3\\sqrt{2}}{2}.\n\\]\n\nThus, the correct inequality relation to fill in the blank is:\n\n\\[\n\\frac{a}{\\sqrt{a^2+b^2}} + \\frac{b}{\\sqrt{2b^2+c^2}} + \\frac{c}{\\sqrt{3c^2+a^2}} \\quad > \\quad \\frac{3\\sqrt{2}}{2}.\n\\]\n\nTherefore, the final answer is:\n\n'\"'\"'The answer is (E) $>$'\"'\"'.\n",
+    "success": true,
+    "error": null
+}

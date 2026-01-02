@@ -1,0 +1,22 @@
+{
+    "data_id": "57",
+    "problem": "Given $a, b, c \\geq 0$, consider the following inequality:\n$$\n\\sum_{cyc} \\sqrt{\\frac{a+b}{b^2+4bc+c^2}} \\quad () \\quad \\frac{2}{\\sqrt{a+2b+4c}}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(E) $>$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Given $a, b, c \\geq 0$, consider the following inequality:\n$$\n\\sum_{cyc} \\sqrt{\\frac{a+b}{b^2+4bc+c^2}} \\quad () \\quad \\frac{2}{\\sqrt{a+2b+4c}}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the inequality \n\n\\[\n\\sum_{cyc} \\sqrt{\\frac{a+b}{b^2+4bc+c^2}} \\quad () \\quad \\frac{2}{\\sqrt{a+2b+4c}},\n\\]\n\nwe need to analyze both sides step by step.\n\n### Step 1: Examining the Left-Hand Side (LHS)\n\nThe left-hand side is \n\n\\[\n\\sum_{cyc} \\sqrt{\\frac{a+b}{b^2+4bc+c^2}}.\n\\]\n\nThis represents the sum of three terms based on cyclic permutations of \\(a, b, c\\). Each term in the sum can be simplified and bounded based on non-negativity:\n\n\\[\n\\sqrt{\\frac{a+b}{b^2 + 4bc + c^2}}.\n\\]\n\n### Step 2: Analyzing the Expression Inside the Square Root\n\nFor each term:\n\n1. \\(a + b\\) is non-negative since \\(a, b, c \\geq 0\\).\n2. The denominator \\(b^2 + 4bc + c^2\\) can be rewritten as:\n\n   \\[\n   b^2 + 4bc + c^2 = (b+c)^2 + 2bc \\geq 0.\n   \\]\n\nThus, each term \\(\\sqrt{\\frac{a+b}{b^2+4bc+c^2}} \\geq 0\\).\n\n### Step 3: Finding an Upper Bound for LHS\n\nNow, we make an assumption that helps simplify comparisons. Let's analyze when equality might hold:\n\nSuppose \\(a = b = c\\). Then each cyclic term becomes:\n\n\\[\n\\sqrt{\\frac{2a}{a^2 + 4a^2 + a^2}} = \\sqrt{\\frac{2a}{6a^2}} = \\sqrt{\\frac{1}{3a}} = \\frac{1}{\\sqrt{3a}}.\n\\]\n\nThus:\n\n\\[\n\\sum_{cyc} \\sqrt{\\frac{a+b}{b^2+4bc+c^2}} = 3\\cdot \\frac{1}{\\sqrt{3a}} = \\sqrt{3}/a.\n\\]\n\nNow let's compute the right-hand side (\\(RHS\\)):\n\n\\[\n\\frac{2}{\\sqrt{a+2b+4c}} = \\frac{2}{\\sqrt{7a}}.\n\\]\n\nSetting \\(x = a\\):\n\nFor equality:\n\n\\[\n\\sqrt{3}/a \\quad ? \\quad \\frac{2}{\\sqrt{7a}}.\n\\]\n\nCross Multiply:\n\n\\[\n\\sqrt{21} \\quad ? \\quad 2\\sqrt{3}.\n\\]\n\nCalculating,\n\n1. \\(21 > 4 \\cdot 3\\), so:\n\n\\[\n\\sqrt{21} > 2 \\sqrt{3},\n\\]\n\nindicating:\n\n\\[\n\\sum_{cyc} \\sqrt{\\frac{a+b}{b^2 + 4bc + c^2}} > \\frac{2}{\\sqrt{a+2b+4c}}.\n\\]\n\n### Conclusion\n\nThe inequality holds as:\n\n\\[\n\\sum_{cyc} \\sqrt{\\frac{a+b}{b^2+4bc+c^2}} \\geq \\frac{2}{\\sqrt{a+2b+4c}}.\n\\]\n\nThus, the answer is:\n\n```plaintext\n'The answer is (B) \u2265'\n```\n",
+    "success": true,
+    "error": null
+}

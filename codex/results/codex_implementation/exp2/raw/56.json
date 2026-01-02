@@ -1,0 +1,22 @@
+{
+    "data_id": "56",
+    "problem": "Given $x_1, x_2, \\ldots, x_n > 0$ such that $\\sum_{i=1}^n x_i = 1$, consider the following inequality:\n$$\n\\sum_{i=1}^n \\frac{x_i+n}{1+x_i^2} \\quad () \\quad n^2 + n.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(D) $<$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Given $x_1, x_2, \\ldots, x_n > 0$ such that $\\sum_{i=1}^n x_i = 1$, consider the following inequality:\n$$\n\\sum_{i=1}^n \\frac{x_i+n}{1+x_i^2} \\quad () \\quad n^2 + n.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the problem, we need to analyze the inequality:\n\n\\[\n\\sum_{i=1}^n \\frac{x_i+n}{1+x_i^2} \\quad () \\quad n^2 + n.\n\\]\n\n### Step 1: Analyzing the Left Side\n\n1. Rewrite the terms to separate contributions:\n   \\[\n   \\sum_{i=1}^n \\frac{x_i+n}{1+x_i^2} = \\sum_{i=1}^n \\frac{x_i}{1+x_i^2} + \\sum_{i=1}^n \\frac{n}{1+x_i^2}.\n   \\]\n\n2. **Bound for \\(\\sum_{i=1}^n \\frac{x_i}{1+x_i^2}\\)**:\n\n   Since \\(x_i > 0\\) and \\(\\sum_{i=1}^n x_i = 1\\), we know \\(x_i\\) is bounded in the range \\(0 < x_i < 1\\).\n\n   For small \\(x_i\\):\n   - \\( \\frac{x_i}{1+x_i^2} \\approx x_i \\) leading to \\( \\sum_{i=1}^n \\frac{x_i}{1+x_i^2} < \\sum_{i=1}^n x_i = 1 \\).\n\n   For large \\(x_i\\):\n   - \\( \\frac{x_i}{1+x_i^2} \\to 0 \\) as \\(x_i \\to 1\\).\n\n   Overall, \\( \\sum_{i=1}^n \\frac{x_i}{1+x_i^2} < 1\\).\n\n3. **Bound for \\(\\sum_{i=1}^n \\frac{n}{1+x_i^2}\\)**:\n\n   Since \\(0 < x_i < 1\\), we can observe the following:\n   - Each \\( \\frac{n}{1+x_i^2} \\quad \\text{is bounded above by} \\quad n\\).\n\n   Thus,\n   \\[\n   \\sum_{i=1}^n \\frac{n}{1+x_i^2} \\leq n^2.\n   \\]\n\n### Step 2: Combine Results\n\nFrom both bounds:\n\\[\n\\sum_{i=1}^n \\frac{x_i+n}{1+x_i^2} < 1 + n^2.\n\\]\n\n### Step 3: Assess Total vs. Desired Quantity\n\nNow comparing with \\(n^2 + n\\):\n1. We have:\n   \\[\n   1 + n^2 < n^2 + n\n   \\]\n   for \\(n > 1\\).\n\nSummarily, for any \\(n > 1\\):\n\\[\n\\sum_{i=1}^n \\frac{x_i+n}{1+x_i^2} < n^2 + n.\n\\]\n\n### Answer\n\nBased on our analysis:\n- The correct relationship to fill the blank is:\n  \n  \\[\n  \\sum_{i=1}^n \\frac{x_i+n}{1+x_i^2} \\quad < \\quad n^2 + n.\n  \\]\n\nThus, the answer is:\n\n'\"'The answer is (D) $<$'\"'\n",
+    "success": true,
+    "error": null
+}

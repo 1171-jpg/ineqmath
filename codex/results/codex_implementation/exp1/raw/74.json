@@ -1,0 +1,22 @@
+{
+    "data_id": "74",
+    "problem": "Let $a, b, c$ be positive real numbers. Consider the following inequality:\n$$\n\\frac{a b}{3 a+4 b+2 c}+\\frac{b c}{3 b+4 c+2 a}+\\frac{c a}{3 c+4 a+2 b} \\quad () \\quad \\frac{a+b+c}{9}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(A) $\\leq$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c$ be positive real numbers. Consider the following inequality:\n$$\n\\frac{a b}{3 a+4 b+2 c}+\\frac{b c}{3 b+4 c+2 a}+\\frac{c a}{3 c+4 a+2 b} \\quad () \\quad \\frac{a+b+c}{9}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the inequality\n\n\\[\n\\frac{a b}{3 a + 4 b + 2 c} + \\frac{b c}{3 b + 4 c + 2 a} + \\frac{c a}{3 c + 4 a + 2 b} \\quad () \\quad \\frac{a + b + c}{9}\n\\]\n\nlet's denote the left side as \\( L \\) and the right side as \\( R \\):\n\n\\[\nL = \\frac{a b}{3 a + 4 b + 2 c} + \\frac{b c}{3 b + 4 c + 2 a} + \\frac{c a}{3 c + 4 a + 2 b}\n\\]\n\n\\[\nR = \\frac{a + b + c}{9}\n\\]\n\nWe aim to determine the relationship between \\( L \\) and \\( R \\).\n\n### Step 1: Analyze the Structure\nEach term on the left-hand side has a similar structure. The denominators are linear combinations of the positive variables \\( a, b, c \\), which prevents the terms from being directly compared in a straightforward manner. \n\n### Step 2: Apply the Cauchy-Schwarz Inequality\nWe can apply the Cauchy-Schwarz inequality in the following form:\n\n\\[\n\\left( \\sum_{i=1}^n x_i \\cdot y_i \\right)^2 \\leq \\left( \\sum_{i=1}^n x_i^2 \\right) \\left( \\sum_{i=1}^n y_i^2 \\right)\n\\]\n\nIn this case, choose \\( x_1 = \\frac{a b}{3a + 4b + 2c}, x_2 = \\frac{b c}{3b + 4c + 2a}, x_3 = \\frac{ca}{3c + 4a + 2b} \\) and \\( y_1 = 3a + 4b + 2c, y_2 = 3b + 4c + 2a, y_3 = 3c + 4a + 2b \\):\n\nApplying Cauchy-Schwarz, we get:\n\n\\[\n\\left( \\frac{ab \\cdot 1}{3a + 4b + 2c} + \\frac{bc \\cdot 1}{3b + 4c + 2a} + \\frac{ca \\cdot 1}{3c + 4a + 2b} \\right) \\leq \\frac{(ab + bc + ca)^2}{(3a+4b+2c) + (3b+4c+2a) + (3c+4a+2b)}\n\\]\n\n### Step 3: Simplifying\nCalculate the denominator:\n\n\\[\n(3a + 4b + 2c) + (3b + 4c + 2a) + (3c + 4a + 2b) = 9(a + b + c) \n\\]\n\nNow we can rewrite our inequality:\n\n\\[\nL \\leq \\frac{(ab + bc + ca)^2}{9(a + b + c)}\n\\]\n\n### Step 4: Relating \\( L \\) and \\( R \\)\nGiven that \\( (ab + bc + ca)^2 \\leq (a+b+c)(ab + bc + ca) \\) from the AM-GM inequality, we further get:\n\n\\[\n\\frac{(a+b+c)(ab + bc + ca)}{9(a+b+c)} \\leq \\frac{a+b+c}{9}\n\\]\n\nThus, we conclude:\n\n\\[\nL \\leq R\n\\]\n\n### Final Conclusion\nBased on the analysis and applying the Cauchy-Schwarz inequality, it is established that\n\n\\[\nL \\leq R.\n\\]\n\nTherefore, the correct option to fill in the blank is:\n\n**'The answer is (A) $\\leq$'**\n",
+    "success": true,
+    "error": null
+}

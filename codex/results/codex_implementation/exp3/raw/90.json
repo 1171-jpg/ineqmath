@@ -1,0 +1,22 @@
+{
+    "data_id": "90",
+    "problem": "Let $a, b, c \\neq 0$ be non-zero real numbers such that $a^2 + b^2 + c^2 = 2(ab + bc + ca)$. Consider the following expression:\n$$\n(a+b+c)\\left(\\frac{1}{2a}+\\frac{1}{3b}+\\frac{1}{c}\\right) \\quad () \\quad 14.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(F) None of the above",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c \\neq 0$ be non-zero real numbers such that $a^2 + b^2 + c^2 = 2(ab + bc + ca)$. Consider the following expression:\n$$\n(a+b+c)\\left(\\frac{1}{2a}+\\frac{1}{3b}+\\frac{1}{c}\\right) \\quad () \\quad 14.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the given problem, we start by analyzing the condition provided: \n\n**Step 1: Analyze the Condition**\n\nThe equation \\( a^2 + b^2 + c^2 = 2(ab + bc + ca) \\) can be rearranged as follows:\n\n\\[\na^2 + b^2 + c^2 - 2(ab + bc + ca) = 0\n\\]\nThis implies:\n\n\\[\n\\frac{1}{2}(a-b)^2 + \\frac{1}{2}(b-c)^2 + \\frac{1}{2}(c-a)^2 = 0\n\\]\nFor this sum of squares to be zero, each individual square must be zero. Therefore:\n\n\\[\na = b = c\n\\]\n\n**Step 2: Substitute into the Expression**\n\nNow, substituting \\( a = b = c \\) into the expression \\( (a+b+c)\\left(\\frac{1}{2a}+\\frac{1}{3b}+\\frac{1}{c}\\right) \\):\n\nLet \\( a = b = c = x \\). Then,\n\n\\[\na + b + c = 3x\n\\]\n\nand substituting into the fraction, we have:\n\n\\[\n\\frac{1}{2a} + \\frac{1}{3b} + \\frac{1}{c} = \\frac{1}{2x} + \\frac{1}{3x} + \\frac{1}{x}\n\\]\n\nFinding a common denominator gives:\n\n\\[\n\\frac{1}{2x} + \\frac{1}{3x} + \\frac{1}{x} = \\frac{3}{6x} + \\frac{2}{6x} + \\frac{6}{6x} = \\frac{11}{6x}\n\\]\n\n**Step 3: Calculate the Whole Expression**\n\nSubstituting into the whole expression, we have:\n\n\\[\n(3x)\\left(\\frac{11}{6x}\\right) = \\frac{33}{6} = 5.5\n\\]\n\n**Step 4: Compare to 14**\n\nNow we compare this value to 14:\n\n\\[\n5.5 < 14\n\\]\n\n**Conclusion**\n\nFrom our calculations, we established that:\n\n\\[\n(a+b+c)\\left(\\frac{1}{2a}+\\frac{1}{3b}+\\frac{1}{c}\\right) < 14\n\\]\n\nThus, the correct inequality relation to fill in the blank is:\n\n**The answer is (D) $<$**.\n",
+    "success": true,
+    "error": null
+}

@@ -1,0 +1,14 @@
+{
+    "data_id": "3",
+    "problem": "Let $a, b, c \\neq 0$ such that $a^2+b^2+c^2=2(ab+bc+ca)$. Find the largest constant $C$ such that the following inequality holds for all $a, b, c$ satisfying the given condition:\n$$\n(a+b+c)\\left(\\frac{1}{a}+\\frac{1}{b}+\\frac{1}{c}\\right) \\geq C\n$$",
+    "answer": "$C = \\frac{27}{2}$",
+    "type": "bound",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is $C=X$', where X is your calculated numerical bound value. Example: 'The answer is $C=1$'.\n\nProblem: Let $a, b, c \\neq 0$ such that $a^2+b^2+c^2=2(ab+bc+ca)$. Find the largest constant $C$ such that the following inequality holds for all $a, b, c$ satisfying the given condition:\n$$\n(a+b+c)\\left(\\frac{1}{a}+\\frac{1}{b}+\\frac{1}{c}\\right) \\geq C\n$$\n\nSolution:",
+    "response": "To solve the problem, we start by analyzing the given condition:\n\n1. **Given Condition Interpretation**: \n   We have \\( a, b, c \\neq 0 \\) and the equation:\n   \\[\n   a^2 + b^2 + c^2 = 2(ab + bc + ca).\n   \\]\n   This can be rearranged to:\n   \\[\n   a^2 + b^2 + c^2 - 2(ab + ac + bc) = 0,\n   \\]\n   or equivalently:\n   \\[\n   (a-b)^2 + (b-c)^2 + (c-a)^2 = 0.\n   \\]\n   This implies that \\( a = b = c \\).\n\n2. **Equality Case**:\n   Let \\( a = b = c = k \\) where \\( k \\) is any non-zero number. Then we substitute \\( a, b, \\) and \\( c \\) into the inequality we want to analyze:\n   \\[\n   (k + k + k) \\left( \\frac{1}{k} + \\frac{1}{k} + \\frac{1}{k} \\right) \\geq C.\n   \\]\n   This simplifies to:\n   \\[\n   3k \\left( \\frac{3}{k} \\right) = 9.\n   \\]\n   So for this equality case, the left side always equals \\( 9 \\).\n\n3. **Finding the Bound**:\n   We propose that \\( C \\) might be at maximum \\( 9 \\). To verify, we need to check if the inequality holds true generally and not just under the equality case.\n   Plugging \\( C = 9 \\) into the inequality yields:\n   \\[\n   (a + b + c)\\left(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}\\right) \\geq 9.\n   \\]\n\n4. **Using AM-HM inequality**:\n   For three positive numbers, \\( a, b, c \\), we know:\n   \\[\n   \\frac{a+b+c}{3} \\geq \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}}.\n   \\]\n   Rearranging gives:\n   \\[\n   (a+b+c)\\left(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}\\right) \\geq 9.\n   \\]\n\nTherefore, we have verified that the largest constant \\( C \\) satisfying this inequality is indeed \\( 9 \\).\n\n### Conclusion\nThus, our final answer, as per the specified format is:\n```\n'The answer is $C=9$'\n```\n",
+    "success": true,
+    "error": null
+}

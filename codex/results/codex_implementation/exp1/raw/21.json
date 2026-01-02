@@ -1,0 +1,14 @@
+{
+    "data_id": "21",
+    "problem": "Let $x, y, z \\in [0,1]$. Determine the minimal constant $C$ such that the following inequality holds for all $x, y, z$:\n$$\nx(x-y)(z-x) \\leq C.\n$$",
+    "answer": "$C = \\frac{4}{27}$",
+    "type": "bound",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is $C=X$', where X is your calculated numerical bound value. Example: 'The answer is $C=1$'.\n\nProblem: Let $x, y, z \\in [0,1]$. Determine the minimal constant $C$ such that the following inequality holds for all $x, y, z$:\n$$\nx(x-y)(z-x) \\leq C.\n$$\n\nSolution:",
+    "response": "To solve the inequality \n\n\\[\nx(x-y)(z-x) \\leq C\n\\]\n\nfor \\( x, y, z \\in [0, 1] \\), we need to find the maximum value of the left-hand side over the specified ranges. We'll follow a series of steps to derive the minimal constant \\( C \\) that satisfies this inequality for all possible values of \\( x, y, z \\).\n\n### Step 1: Analyze the function \\( f(x, y, z) = x(x-y)(z-x) \\)\n\n- The function depends on \\( x, y, z \\), and we need to evaluate its behavior over the interval [0, 1].\n- Each term can be analyzed:\n  - \\( x \\) ranges from 0 to 1.\n  - \\( (x-y) \\) reaches its maximum when \\( y \\) is minimized (i.e., \\( y = 0 \\)).\n  - \\( (z-x) \\) is maximized when \\( z \\) is maximized (i.e., \\( z = 1 \\)).\n\n### Step 2: Simplify the analysis\n\nLet\u2019s evaluate \\( f(x, 0, 1) = x(x-0)(1-x) = x^2(1-x) \\).\n\nNow, the problem simplifies to maximizing \n\n\\[\ng(x) = x^2(1-x)\n\\]\n\nfor \\( x \\in [0, 1] \\).\n\n### Step 3: Find the maximum of \\( g(x) \\)\n\n- To find the critical points, differentiate \\( g(x) \\):\n\n\\[\ng'(x) = 2x(1-x) - x^2 = 2x - 3x^2\n\\]\n\n- Set the derivative equal to zero:\n\n\\[\n2x - 3x^2 = 0\n\\]\n\nFactoring out \\( x \\):\n\n\\[\nx(2 - 3x) = 0\n\\]\nThus, \\( x = 0 \\) or \\( x = \\frac{2}{3} \\).\n\n- Evaluate \\( g(x) \\) at critical points and endpoints:\n\n1. \\( g(0) = 0^2(1-0) = 0 \\)\n2. \\( g(1) = 1^2(1-1) = 0 \\)\n3. \\( g\\left(\\frac{2}{3}\\right) = \\left(\\frac{2}{3}\\right)^2\\left(1 - \\frac{2}{3}\\right) = \\frac{4}{9} \\cdot \\frac{1}{3} = \\frac{4}{27} \\)\n\n### Step 4: Conclusion\n\nThe maximum value of \\( g(x) \\) over the interval [0, 1] is \\( \\frac{4}{27} \\).\n\n### Step 5: Identify the minimal constant \\( C \\)\n\nThus, the minimal constant \\( C \\) such that \n\n\\[\nx(x-y)(z-x) \\leq C\n\\]\n\nholds for all \\( x, y, z \\in [0, 1] \\) is:\n\n\\[\nC = \\frac{4}{27}\n\\]\n\n### Final Answer\n\nThe answer is \\( C = \\frac{4}{27} \\). Therefore, the final statement is:\n\n```\n'The answer is $C=\\frac{4}{27}$'\n```\n",
+    "success": true,
+    "error": null
+}

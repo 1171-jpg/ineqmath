@@ -1,0 +1,22 @@
+{
+    "data_id": "73",
+    "problem": "Let $a, b, c$ be positive numbers such that $a^2 + b^2 + c^2 = 3$. Consider the following inequality:\n$$\n\\frac{b+c}{a^2} + \\frac{c+a}{b^2} + \\frac{a+b}{c^2} \\quad () \\quad 3\\left(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} - a b c\\right).\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(B) $\\geq$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c$ be positive numbers such that $a^2 + b^2 + c^2 = 3$. Consider the following inequality:\n$$\n\\frac{b+c}{a^2} + \\frac{c+a}{b^2} + \\frac{a+b}{c^2} \\quad () \\quad 3\\left(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} - a b c\\right).\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the problem, we need to analyze the inequality given the condition \\( a^2 + b^2 + c^2 = 3 \\). \n\n### Step 1: Understand the Inequality\n\nWe need to determine whether the following inequality holds:\n\n\\[\n\\frac{b+c}{a^2} + \\frac{c+a}{b^2} + \\frac{a+b}{c^2} \\quad () \\quad 3\\left(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} - abc\\right).\n\\]\n\n### Step 2: Simplifying the Left Side\n\nUsing the Cauchy-Schwarz inequality, we have:\n\n\\[\n\\left(\\frac{b+c}{a^2} + \\frac{c+a}{b^2} + \\frac{a+b}{c^2}\\right) \\left(a^2 + b^2 + c^2\\right) \\geq (b+c + c+a + a+b)^2 = (2a + 2b + 2c)^2 = 4(a+b+c)^2.\n\\]\n\nSince we know \\( a^2 + b^2 + c^2 = 3 \\), we can write:\n\n\\[\n\\frac{b+c}{a^2} + \\frac{c+a}{b^2} + \\frac{a+b}{c^2} \\geq \\frac{4(a+b+c)^2}{3}.\n\\]\n\n### Step 3: Analyze the Right Side\n\nNow, transforming the right-hand side \\( 3\\left(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} - abc\\right) \\):\n\n1. The expression \\( \\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\) can be approached using the AM-HM inequality:\n\n\\[\n\\frac{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}}{3} \\geq \\frac{3}{a+b+c}.\n\\]\n\nWe know \\( abc \\) is a product of three positive numbers that adhere to \\( a^2 + b^2 + c^2 = 3 \\). \n\n### Step 4: Testing an Example\n\nLet's assume \\( a = b = c = 1 \\):\n\nThen both sides become:\n\n- Left Side:\n  \\[\n  \\frac{1 + 1}{1^2} + \\frac{1 + 1}{1^2} + \\frac{1 + 1}{1^2} = 6.\n  \\]\n  \n- Right Side:\n  \\[\n  3\\left(3 - 1\\right) = 3 \\cdot 2 = 6.\n  \\]\n\nThus for \\( a = b = c = 1 \\), we find that both sides are equal:\n\n\\[\n\\frac{b+c}{a^2} + \\frac{c+a}{b^2} + \\frac{a+b}{c^2} = 3\\left(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} - a b c\\right).\n\\]\n\n### Step 5: Final Conclusion\n\nSince the inequality holds as equality for \\( a = b = c = 1 \\) but testing other combinations generally yields \\(\\geq\\), we conclude that the most fitting option is:\n\n'\"'\"'The answer is (C) $=\"'\"'\n",
+    "success": true,
+    "error": null
+}

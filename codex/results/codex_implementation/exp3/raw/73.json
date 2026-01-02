@@ -1,0 +1,22 @@
+{
+    "data_id": "73",
+    "problem": "Let $a, b, c$ be positive numbers such that $a^2 + b^2 + c^2 = 3$. Consider the following inequality:\n$$\n\\frac{b+c}{a^2} + \\frac{c+a}{b^2} + \\frac{a+b}{c^2} \\quad () \\quad 3\\left(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} - a b c\\right).\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(B) $\\geq$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c$ be positive numbers such that $a^2 + b^2 + c^2 = 3$. Consider the following inequality:\n$$\n\\frac{b+c}{a^2} + \\frac{c+a}{b^2} + \\frac{a+b}{c^2} \\quad () \\quad 3\\left(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} - a b c\\right).\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the given inequality problem, we start from the condition \\( a^2 + b^2 + c^2 = 3 \\) and the expression involved in the inequality.\n\n### Step 1: **Understanding the Left-Hand Side (LHS)**\n\nThe LHS of the inequality is:\n\n\\[\n\\frac{b+c}{a^2} + \\frac{c+a}{b^2} + \\frac{a+b}{c^2}\n\\]\n\n### Step 2: **Understanding the Right-Hand Side (RHS)**\n\nThe RHS of the inequality is:\n\n\\[\n3\\left(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} - abc\\right).\n\\]\n\n### Step 3: **Using Cauchy-Schwarz Inequality**\n\nWe can apply the Cauchy-Schwarz inequality to express the LHS as follows:\n\n\\[\n\\left( \\frac{b+c}{a^2} + \\frac{c+a}{b^2} + \\frac{a+b}{c^2} \\right) \\left( a^2 + b^2 + c^2 \\right) \\geq (b+c + c+a + a+b)^2.\n\\]\n\n### Step 4: **Calculating Each Side**\n\nSince \\( a^2 + b^2 + c^2 = 3 \\), we replace the first part:\n\n\\[\n\\left( \\frac{b+c}{a^2} + \\frac{c+a}{b^2} + \\frac{a+b}{c^2} \\right) \\cdot 3 \\geq (2a + 2b + 2c)^2 = 4(a+b+c)^2.\n\\]\n\nDividing both sides by 3 gives:\n\n\\[\n\\frac{b+c}{a^2} + \\frac{c+a}{b^2} + \\frac{a+b}{c^2} \\geq \\frac{4}{3} (a+b+c)^2.\n\\]\n\n### Step 5: **Finding \\( a+b+c \\)**\n\nUsing the Cauchy-Schwarz inequality again:\n\n\\[\n(a+b+c)^2 \\leq (1^2 + 1^2 + 1^2)(a^2 + b^2 + c^2) = 3 \\cdot 3 = 9.\n\\]\n\nThus,\n\n\\[\na+b+c \\leq 3 \\implies (a+b+c)^2 \\leq 9.\n\\]\n\n### Step 6: **Simplifying the RHS**\n\nNow, substituting back to the inequality on LHS:\n\n\\[\n\\frac{4}{3}(a+b+c)^2 \\leq \\frac{4}{3} \\cdot 9 = 12.\n\\]\n\nNow, let\u2019s analyze the RHS:\n\n\\[\n3\\left(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} - abc\\right).\n\\]\n\nBy AM-HM inequality,\n\n\\[\n\\frac{a+b+c}{3} \\geq \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}}.\n\\]\n\nThen multiplying by \\( 3 \\):\n\n\\[\na+b+c \\geq \\frac{9}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}} \\implies 3\\cdot\\frac{1}{a} + 3\\cdot\\frac{1}{b} + 3\\cdot\\frac{1}{c} \\geq 3\\cdot abc.\n\\]\n\n### Step 7: **Conclusion for the Relation**\n\nAnalyzing and combining all the inequalities, we see:\n\n\\[\n\\frac{b+c}{a^2} + \\frac{c+a}{b^2} + \\frac{a+b}{c^2} \\quad \\text{is always greater than or equal to} \\quad 3\\left(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} - abc\\right).\n\\]\n\nThis gives us the conclusion:\n\n\\[\n\\frac{b+c}{a^2} + \\frac{c+a}{b^2} + \\frac{a+b}{c^2} \\geq 3(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} - abc),\n\\]\n\nTherefore, the correct choice is:\n\n**Final Answer:**\n\n```plaintext\n'TThe answer is (B) \u2265'\n```\n",
+    "success": true,
+    "error": null
+}

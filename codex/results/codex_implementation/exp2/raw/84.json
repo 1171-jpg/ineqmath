@@ -1,0 +1,22 @@
+{
+    "data_id": "84",
+    "problem": "Let $a, b, c$ be positive real numbers such that $a + b + c = 1$. Consider the following inequality:\n$$\na \\sqrt[3]{1+b-c} + b \\sqrt[3]{1+c-a} + c \\sqrt[3]{1+a-b} \\quad () \\quad 1.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(A) $\\leq$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c$ be positive real numbers such that $a + b + c = 1$. Consider the following inequality:\n$$\na \\sqrt[3]{1+b-c} + b \\sqrt[3]{1+c-a} + c \\sqrt[3]{1+a-b} \\quad () \\quad 1.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the given inequality, we can employ methods from the realm of inequalities, particularly focusing on Jensen's inequality since we are dealing with positive reals.\n\n### Steps of the Solution:\n\n1. **Understand the variables**:\n   Given that \\(a + b + c = 1\\) and \\(a, b, c > 0\\), we can consider each of these as fractions of a whole. Therefore, it\u2019s reasonable to explore the inequality using the properties of convex functions.\n\n2. **Define the function**:\n   We are looking at the expression:\n   \\[\n   S = a \\sqrt[3]{1+b-c} + b \\sqrt[3]{1+c-a} + c \\sqrt[3]{1+a-b}.\n   \\]\n\n3. **Apply Jensen's Inequality**:\n   The cube root function \\(\\sqrt[3]{x}\\) is a concave function for \\(x \\geq 0\\). Thus, according to Jensen's inequality, we have:\n   \\[\n   \\sqrt[3]{\\frac{1+b-c + 1+c-a + 1+a-b}{3}} \\leq \\frac{1}{3} \\left( S \\right).\n   \\]\n   The average \\(1 + b - c + 1 + c - a + 1 + a - b = 3\\) simplifies to \\(1\\), hence:\n   \\[\n   \\sqrt[3]{1} = 1 \\leq S.\n   \\]\n   Therefore, we have:\n   \\[\n   S \\geq 1.\n   \\]\n\n4. **Resulting inequality**:\n   The inequality derived from applying Jensen's inequality tells us that:\n   \\[\n   a \\sqrt[3]{1+b-c} + b \\sqrt[3]{1+c-a} + c \\sqrt[3]{1+a-b} \\geq 1.\n   \\]\n\n### Conclusion:\nThe inequality clearly indicates that the left-hand side is greater than or equal to 1. Therefore, we conclude that the correct relation to fill in the blank is:\n\n'\"'\"'The answer is (B) $\\geq$'\"'\"'\n",
+    "success": true,
+    "error": null
+}

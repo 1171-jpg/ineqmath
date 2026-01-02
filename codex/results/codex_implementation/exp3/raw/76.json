@@ -1,0 +1,22 @@
+{
+    "data_id": "76",
+    "problem": "Let $a, b, c$ be positive real numbers such that $abc = 1$. Consider the following inequality:\n$$\n\\sum \\frac{a(a^3+1)}{3b+c} \\quad () \\quad 2a^3 + b^3 + c^3.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(F) None of the above",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c$ be positive real numbers such that $abc = 1$. Consider the following inequality:\n$$\n\\sum \\frac{a(a^3+1)}{3b+c} \\quad () \\quad 2a^3 + b^3 + c^3.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the inequality \n\n\\[\n\\sum \\frac{a(a^3+1)}{3b+c} \\quad () \\quad 2a^3 + b^3 + c^3\n\\]\n\ngiven that \\( abc = 1 \\), we will analyze both sides step-by-step.\n\n### Rearranging the Sum\n\nFirst, let's rewrite the left-hand side:\n\n\\[\n\\sum \\frac{a(a^3 + 1)}{3b + c} = \\sum \\frac{a^4}{3b + c} + \\sum \\frac{a}{3b + c}\n\\]\n\n### Applying AM-GM Inequality\n\nUsing the properties of symmetric sums and the AM-GM inequality, we can analyze the right side:\n\n\\[\n2a^3 + b^3 + c^3 \\quad \\text{and applying the AM-GM inequality, we have:}\n\\]\n\n\\[\n\\frac{2a^3 + b^3 + c^3}{3} \\geq (2a^3 \\cdot b^3 \\cdot c^3)^{1/3}\n\\]\n\nSince \\( bc = \\frac{1}{a} \\) (and similar for others), we know that:\n\n\\[\n(2a^3 \\cdot \\frac{1}{a} \\cdot \\frac{1}{a})^{1/3} \\to \\frac{2(abc)^{3/5}}{a^{2/5}} = 2\n\\]\n\n### Finding a Relation\n\nNow let's analyse the parts of the inequality:\n\n1. **Left Side:**\n   \\[\n   \\sum \\frac{a(a^3+1)}{3b+c}\n   \\]\n\n   We can deduce this portion augmented with \\( abc=1 \\) constraints. \n\n2. **Right Side:**\n   Let's assume a simple case where \\( a = b = c = 1 \\):\n\n   Evaluating:\n   \\[\n   2(1)^3 + (1)^3 + (1)^3 = 2 + 1 + 1 = 4\n   \\]\n\n### Testing with Specific Values\n\nWith \\( a = b = c = 1 \\):\n\\[\n\\sum \\frac{1(1^3 + 1)}{3 \\cdot 1 + 1} = \\sum \\frac{2}{4} = \\frac{1}{2} + \\frac{1}{2} + \\frac{1}{2} = \\frac{3}{2}\n\\]\n\nThe values suggest \\( \\frac{3}{2} \\) is significantly less than \\( 4 \\).\n\n### Approach with Cauchy-Schwarz\n\nUsing the Cauchy-Schwarz inequality:\n\\[\n\\sum \\frac{a(a^3+1)}{3b+c} \\geq \\frac{(a + a^3 + b + c)^2}{3} \n\\]\n\n### Conclusion\n\nFrom numerical evidence and symmetry in the arrangement, we see that \n\n\\[\n\\sum \\frac{a(a^3+1)}{3b+c} < 2a^3 + b^3 + c^3\n\\]\n\nFor given \\( a \\), \\( b \\), and \\( c \\) satisfying the product constraints. We suspect that this will hold in general due to the constraint \\( abc = 1 \\) favoring symmetrically smaller configurations.\n\nThus, the fulfilling inequality is:\n\n'\"'\"'The answer is (D) $<$'\"'\"'\n",
+    "success": true,
+    "error": null
+}

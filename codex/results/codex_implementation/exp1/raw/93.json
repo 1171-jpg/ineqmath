@@ -1,0 +1,22 @@
+{
+    "data_id": "93",
+    "problem": "Let $a, b \\geq 0$ be non-negative real numbers such that $a + b = 1$. Consider the following inequality:\n$$\na^5 + 16b^5 \\quad () \\quad \\frac{1}{6}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(E) $>$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b \\geq 0$ be non-negative real numbers such that $a + b = 1$. Consider the following inequality:\n$$\na^5 + 16b^5 \\quad () \\quad \\frac{1}{6}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the problem, we start with the constraint that \\( a + b = 1 \\) where \\( a, b \\geq 0 \\). This implies that \\( b = 1 - a \\).\n\nWe're tasked with evaluating the inequality:\n\n\\[\na^5 + 16b^5 \\quad () \\quad \\frac{1}{6}.\n\\]\n\nBy substituting \\( b \\), the expression becomes:\n\n\\[\na^5 + 16(1 - a)^5.\n\\]\n\nWe can simplify \\( 16(1 - a)^5 \\) to further analyze the inequality:\n\n### 1. Analyzing the Function\nLet \\( f(a) = a^5 + 16(1 - a)^5 \\). We want to analyze this function within the interval \\( [0, 1] \\).\n\n### 2. Finding Critical Points\nTo find the maximum or minimum values of \\( f(a) \\), we will compute its derivative:\n\n\\[\nf'(a) = 5a^4 - 16 \\cdot 5(1 - a)^4 \\cdot (-1)\n= 5a^4 + 80(1 - a)^4.\n\\]\n\nSetting the derivative to zero:\n\n\\[\n5a^4 + 80(1 - a)^4 = 0.\n\\]\n\nSince \\( 5a^4 \\) and \\( 80(1-a)^4 \\) are both non-negative, the equation \\( 5a^4 + 80(1-a)^4 = 0 \\) holds only when each term is zero. This gives us the solution:\n\n1. \\( a^4 = 0 \\) implies \\( a = 0 \\) (hence \\( b = 1 \\)).\n2. \\( (1 - a)^4 = 0 \\) implies \\( 1 - a = 0 \\) (hence \\( a = 1 \\)).\n\nWe will evaluate \\( f(a) \\) at these endpoints:\n\n- **At \\( a = 0 \\)**:\n  \\[\n  f(0) = 0^5 + 16(1 - 0)^5 = 16.\n  \\]\n\n- **At \\( a = 1 \\)**:\n  \\[\n  f(1) = 1^5 + 16(0)^5 = 1.\n  \\]\n\n### 3. Finding Maximum Value\nTo find the maximum value of the function \\( f(a) \\) in the interval \\( [0, 1] \\), we calculate:\n\n- \\( f(0) = 16 \\)\n- \\( f(1) = 1 \\)\n\nGiven that \\( f(a) \\) is continuous on the closed interval \\( [0, 1] \\) and differentiable within, the maximum value occurs at one of these endpoints. Since \\( 16 > \\frac{1}{6} \\) and \\( 1 < \\frac{1}{6} \\), we will evaluate \\( f(a) \\) over a critical point.\n\n### 4. Evaluating the Maximum\nSince when \\( a = 0 \\), \\( f(0) = 16 \\) which exceeds \\( \\frac{1}{6} \\), and at \\( a = 1 \\), \\( f(1) = 1 \\) also does not satisfy the condition.\n\nIt is prudent to explore intermediate points, or use numerical or graphical methods to evaluate if there exists a value of \\( a \\) such that:\n\\[\na^5 + 16(1 - a)^5 \\leq \\frac{1}{6}.\n\\]\nHowever, checking values such as \\( a = \\frac{1}{2} \\):\n \\[\nf\\left(\\frac{1}{2}\\right) = \\left(\\frac{1}{2}\\right)^5 + 16\\left(\\frac{1}{2}\\right)^5 = 0.03125 + 0.5 = 0.53125.\n\\]\n\nSeeing that all computations show that \\( f(0) = 16 \\) is maximum, thus:\n\\[\n\\forall \\: a \\in [0, 1], \\: a^5 + 16(1 - a)^5 > \\frac{1}{6}.\n\\]\n\n### Conclusion\nThus, we can conclude:\n\n\\[\na^5 + 16b^5 \\geq \\frac{1}{6}.\n\\]\n\nHence, the correct relationship is:\n\n'\"'\"'The answer is (B) $\\geq$'\"'\"'.\n",
+    "success": true,
+    "error": null
+}

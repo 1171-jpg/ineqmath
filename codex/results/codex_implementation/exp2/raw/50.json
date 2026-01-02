@@ -1,0 +1,22 @@
+{
+    "data_id": "50",
+    "problem": "Let $a, b, c \\geq 0$ be non-negative real numbers such that $a + b + c = 1$. Consider the following inequality:\n$$\n7(ab + bc + ca) \\quad () \\quad 3 + 9abc.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(D) $<$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c \\geq 0$ be non-negative real numbers such that $a + b + c = 1$. Consider the following inequality:\n$$\n7(ab + bc + ca) \\quad () \\quad 3 + 9abc.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the problem, we need to analyze the expression \\( 7(ab + bc + ca) \\) in relation to \\( 3 + 9abc \\).\n\nGiven the condition \\( a + b + c = 1 \\) and \\( a, b, c \\geq 0 \\), we will investigate the values for \\( ab + bc + ca \\) and \\( abc \\).\n\n1. **Understanding the terms**:\n   - The term \\( ab + bc + ca \\) can be rewritten in terms of \\( a, b, c \\).\n   - The term \\( abc \\) represents the product of the three non-negative numbers.\n\n2. **Using AM-GM Inequality**:\n   The Arithmetic Mean-Geometric Mean (AM-GM) inequality states that:\n   \\[\n   \\frac{a + b + c}{3} \\geq \\sqrt[3]{abc}\n   \\]\n   Substituting \\( a + b + c = 1 \\):\n   \\[\n   \\frac{1}{3} \\geq \\sqrt[3]{abc} \\Rightarrow abc \\leq \\frac{1}{27}\n   \\]\n\n3. **Finding \\( ab + bc + ca \\)**:\n   Another application of AM-GM gives:\n   \\[\n   ab + bc + ca \\leq \\frac{(a + b + c)^2}{3} = \\frac{1^2}{3} = \\frac{1}{3}.\n   \\]\n\n4. **Calculating \\( 7(ab + bc + ca) \\)**:\n   Using the upper bound for \\( ab + bc + ca \\):\n   \\[\n   7(ab + bc + ca) \\leq 7 \\cdot \\frac{1}{3} = \\frac{7}{3}.\n   \\]\n\n5. **Finding \\( 3 + 9abc \\)**:\n   Since \\( abc \\leq \\frac{1}{27} \\):\n   \\[\n   9abc \\leq 9 \\cdot \\frac{1}{27} = \\frac{1}{3}.\n   \\]\n   Thus:\n   \\[\n   3 + 9abc \\leq 3 + \\frac{1}{3} = \\frac{10}{3}.\n   \\]\n\n6. **Comparison**:\n   Now we compare \\( 7(ab + bc + ca) \\) and \\( 3 + 9abc \\):\n   \\[\n   \\frac{7}{3} \\leq \\frac{10}{3} \\Rightarrow 7(ab + bc + ca) \\leq 3 + 9abc.\n   \\]\n\nThis indicates that we can fill in the blank with the symbol \\( \\leq \\).\n\nThus, the correct inequality is:\n``'The answer is (A) $\\leq$'``.\n",
+    "success": true,
+    "error": null
+}

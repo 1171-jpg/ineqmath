@@ -1,0 +1,14 @@
+{
+    "data_id": "49",
+    "problem": "Let $p > q > 0$. Determine the largest constants $C$ such that the following inequality holds for all $x \\in \\mathbb{R}$:\n$$\n\\frac{p+q}{p-q} \\geq C\\frac{2(x^2-2 q x+p^2)}{x^2+2 q x+p^2} \n$$",
+    "answer": "$C = \\frac{1}{2}$",
+    "type": "bound",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is $C=X$', where X is your calculated numerical bound value. Example: 'The answer is $C=1$'.\n\nProblem: Let $p > q > 0$. Determine the largest constants $C$ such that the following inequality holds for all $x \\in \\mathbb{R}$:\n$$\n\\frac{p+q}{p-q} \\geq C\\frac{2(x^2-2 q x+p^2)}{x^2+2 q x+p^2} \n$$\n\nSolution:",
+    "response": "To solve the inequality \n\n\\[\n\\frac{p+q}{p-q} \\geq C\\frac{2(x^2-2 q x+p^2)}{x^2+2 q x+p^2}\n\\]\n\nfor all \\( x \\in \\mathbb{R} \\), we'll follow these steps:\n\n1. **Rearranging the Inequality**:\n   Rewrite the inequality as:\n\n   \\[\n   C \\leq \\frac{(p+q)(x^2 + 2qx + p^2)}{(p-q) \\cdot 2(x^2 - 2qx + p^2)}\n   \\]\n\n2. **Finding Critical Points**:\n   We need to analyze the expression on the right-hand side:\n\n   \\[\n   \\frac{(p+q)(x^2 + 2qx + p^2)}{(p-q)(2(x^2 - 2qx + p^2))}\n   \\]\n\n   This involves simplifying and finding its maximum value for all \\( x \\).\n\n3. **Analyzing the Rational Function**:\n   Let:\n\n   \\[\n   f(x) = \\frac{(p+q)(x^2 + 2qx + p^2)}{2(x^2 - 2qx + p^2)}\n   \\]\n\n   The critical points occur where the derivative \\( f'(x) = 0 \\). To find this, compute \\( f'(x) \\) using the quotient rule:\n\n   \\[\n   f'(x) = \\frac{(p+q)(2x + 2q)(2(x^2 - 2qx + p^2)) - (p+q)(x^2 + 2qx + p^2) \\cdot 4(x - q)}{(2(x^2 - 2qx + p^2))^2}\n   \\]\n\n   Set the numerator to zero and solve for \\( x \\).\n\n4. **Identifying Value Limits**:\n    Investigate limits as \\( x \\to \\pm\\infty \\):\n\n   \\[\n   \\lim_{x \\to \\pm \\infty} f(x) = \\frac{(p+q)}{2}\n   \\]\n\n   The maximum of \\( f(x) \\) will also occur at critical points found in step 3.\n\n5. **Taking Supremum**:\n   Let \\( C \\) equal the maximum value of \\( \\frac{(p+q)}{(p-q)} \\cdot \\frac{1}{2} \\):\n\n   \\[\n   C = \\frac{(p+q)}{2(p-q)}\n   \\]\n\n   This value holds as the largest \\( C \\) such that the inequality is satisfied for all \\( x \\in \\mathbb{R} \\).\n\nPutting everything together, we conclude that:\n\n\\[\nC = \\frac{p+q}{2(p-q)}\n\\]\n\nFinally, in the requested format: \n\n```plaintext\nThe answer is $C=\\frac{p+q}{2(p-q)}$\n```\n",
+    "success": true,
+    "error": null
+}

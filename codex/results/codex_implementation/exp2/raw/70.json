@@ -1,0 +1,22 @@
+{
+    "data_id": "70",
+    "problem": "Let $a, b, c$ be positive numbers. Consider the following inequality:\n$$\n\\frac{a^2}{b} + \\frac{b^2}{c} + \\frac{4c^2}{a} \\quad () \\quad -3a + b + 7c.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(E) $>$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c$ be positive numbers. Consider the following inequality:\n$$\n\\frac{a^2}{b} + \\frac{b^2}{c} + \\frac{4c^2}{a} \\quad () \\quad -3a + b + 7c.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the problem, we need to analyze the inequality:\n\n\\[\n\\frac{a^2}{b} + \\frac{b^2}{c} + \\frac{4c^2}{a} \\quad () \\quad -3a + b + 7c.\n\\]\n\nWe can begin by examining each left-hand side term separately and then comparing it with \\( -3a + b + 7c \\).\n\n### Step 1: Applying the Cauchy-Schwarz Inequality\n\nUsing the Cauchy-Schwarz inequality, we can write:\n\n\\[\n\\left( \\frac{a^2}{b} + \\frac{b^2}{c} + \\frac{4c^2}{a} \\right) \\left( b + c + \\frac{4a}{3} \\right) \\geq (a + b + 4c)^2\n\\]\n\nThis implies that:\n\n\\[\n\\frac{a^2}{b} + \\frac{b^2}{c} + \\frac{4c^2}{a} \\geq \\frac{(a + b + 4c)^2}{b + c + \\frac{4a}{3}}.\n\\]\n\n### Step 2: Estimating Lower Bound\n\nNext, we analyze the expression \\( -3a + b + 7c \\). To compare \\( \\frac{a^2}{b} + \\frac{b^2}{c} + \\frac{4c^2}{a} \\) with \\( -3a + b + 7c \\), we can intuitively test cases.\n\n### Step 3: Test Case for Values\n\nLet's consider setting \\( a = 1, b = 1, c = 1 \\):\n\n\\[\n\\frac{1^2}{1} + \\frac{1^2}{1} + \\frac{4 \\cdot 1^2}{1} = 1 + 1 + 4 = 6.\n\\]\n\nCalculating the right-hand side gives:\n\n\\[\n-3 \\cdot 1 + 1 + 7 \\cdot 1 = -3 + 1 + 7 = 5.\n\\]\n\nThus, \n\n\\[\n6 \\quad () \\quad 5.\n\\]\n\nThis suggests that the left-hand side is greater than the right-hand side:\n\n\\[\n\\frac{a^2}{b} + \\frac{b^2}{c} + \\frac{4c^2}{a} \\geq -3a + b + 7c\n\\]\n\n### Step 4: Generalization\n\nWe can see that tried and tested values suggest a pattern, so we start hypothesizing that the left-hand side must generally be greater than the right-hand side.\n\nTo ensure the validity of our inference, we can try another set, such as:\n- If \\( a = 1, b = 2, c = 1 \\) leads to similar conclusions.\n\nBased on positive and increasing nature of each term on the left-hand side, it appears that:\n\n\\[\n\\frac{a^2}{b} + \\frac{b^2}{c} + \\frac{4c^2}{a} \\geq -3a + b + 7c\n\\]\n\nThereby confirming our suggestion that:\n\n\\[\n\\text{The correct inequality is } \\geq.\n\\]\n\n### Conclusion\n\nThus, our filled-in inequality is:\n\n\\[\n\\frac{a^2}{b} + \\frac{b^2}{c} + \\frac{4c^2}{a} \\geq -3a + b + 7c.\n\\]\n\nThus, the final answer is:\n\n'''The answer is (B) $\\geq$'''\n",
+    "success": true,
+    "error": null
+}

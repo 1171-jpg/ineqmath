@@ -1,0 +1,22 @@
+{
+    "data_id": "88",
+    "problem": "Let $a, b, c > 0$ be positive real numbers such that $a + b + c = 3$. Consider the following inequality:\n$$\na^2 + 4b^2 + 4b + 8c \\quad () \\quad 7 + 2\\sqrt{2(b^2 + c^2)} + 4\\sqrt{bc}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(B) $\\geq$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c > 0$ be positive real numbers such that $a + b + c = 3$. Consider the following inequality:\n$$\na^2 + 4b^2 + 4b + 8c \\quad () \\quad 7 + 2\\sqrt{2(b^2 + c^2)} + 4\\sqrt{bc}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the problem, we need to establish the relationship between \\( a^2 + 4b^2 + 4b + 8c \\) and \\( 7 + 2\\sqrt{2(b^2 + c^2)} + 4\\sqrt{bc} \\) given the constraint \\( a + b + c = 3 \\).\n\n### Step 1: Substitute \\( a \\)\n\nSince \\( a + b + c = 3 \\), we can express \\( a \\) in terms of \\( b \\) and \\( c \\):\n\\[\na = 3 - b - c\n\\]\n\nNow, let's substitute this expression into our inequality.\n\n### Step 2: Expand Left Side\n\nThe left-hand side becomes:\n\\[\n(3 - b - c)^2 + 4b^2 + 4b + 8c\n\\]\nExpanding \\( (3 - b - c)^2 \\):\n\\[\n= 9 - 6b - 6c + b^2 + 2bc + c^2\n\\]\nThus, combining all terms, we have:\n\\[\n9 - 6b - 6c + b^2 + 2bc + c^2 + 4b^2 + 4b + 8c\n\\]\n\\[\n= 9 + (4b^2 + b^2) + (2bc) + (4b - 6b) + (8c - 6c)\n\\]\n\\[\n= 9 + 5b^2 + 2bc - 2b + 2c\n\\]\n\n### Step 3: Simplifying the Right Side\n\nWe turn our attention to the right-hand side:\n\n\\[\n7 + 2\\sqrt{2(b^2 + c^2)} + 4\\sqrt{bc}\n\\]\n\nRearranging our original inequality:\n\\[\n9 + 5b^2 + 2bc - 2b + 2c \\quad ? \\quad 7 + 2\\sqrt{2(b^2 + c^2)} + 4\\sqrt{bc}\n\\]\n\n### Step 4: Analyze Special Cases\n\nLet\u2019s analyze specific cases to test the hypothesis.\n\n#### Case 1: \\( a = 1, b = 1, c = 1 \\)\n\n\\[\n\\text{Left: } 1^2 + 4(1^2) + 4(1) + 8(1) = 1 + 4 + 4 + 8 = 17\n\\]\n\\[\n\\text{Right: } 7 + 2\\sqrt{2(1^2 + 1^2)} + 4\\sqrt{1 \\cdot 1} = 7 + 2\\sqrt{4} + 4 = 7 + 4 + 4 = 15\n\\]\nHere \\( 17 > 15 \\).\n\n#### Case 2: \\( b = 0, c = 3, a = 0 \\)\n\n\\[\n\\text{Left: } 0 + 4(0^2) + 4(0) + 8(3) = 24\n\\]\n\\[\n\\text{Right: } 7 + 2\\sqrt{2(0^2 + 3^2)} + 4\\sqrt{0 \\cdot 3} = 7 + 2\\sqrt{18} = 7 + 6 = 13\n\\]\nHere \\( 24 > 13 \\).\n\n#### Generalizing\n\nBoth cases indicate that the left side tends to dominate. To formulate a conclusion, notice that as \\( a, b, c \\) vary while satisfying their constraints, you can observe the inequality:\n\n\\[\nLHS > RHS\n\\]\n\n### Conclusion\n\nAfter testing specific cases and reasoning through the general expressions and their possible configurations, we can conjecture:\n\nTherefore, the correct relationship to fill in the blank is:\n\n```plaintext\n'The answer is (B) >'\n```\n",
+    "success": true,
+    "error": null
+}

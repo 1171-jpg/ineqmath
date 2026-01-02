@@ -1,0 +1,22 @@
+{
+    "data_id": "79",
+    "problem": "Let $a, b, c, d$ be non-negative numbers. Consider the following inequality:\n$$\na^4 +2 b^4 + 3c^4 + d^4 + 3abcd \\quad () \\quad \\frac{1}{2} \\sum_{cyc} a^3(b+c+d).\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(B) $\\geq$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c, d$ be non-negative numbers. Consider the following inequality:\n$$\na^4 +2 b^4 + 3c^4 + d^4 + 3abcd \\quad () \\quad \\frac{1}{2} \\sum_{cyc} a^3(b+c+d).\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the inequality \n\n\\[\na^4 + 2b^4 + 3c^4 + d^4 + 3abcd \\quad () \\quad \\frac{1}{2} \\sum_{cyc} a^3(b + c + d),\n\\]\n\nlet's analyze both sides step by step.\n\n### Left Side Analysis (LS)\nThe left side consists of terms involving the fourth powers of \\(a\\), \\(b\\), \\(c\\), and \\(d\\), along with the mixed term \\(3abcd\\). All variables are non-negative, which means:\n\n1. \\(a^4\\), \\(2b^4\\), \\(3c^4\\), and \\(d^4\\) all contribute positively to the sum.\n2. The term \\(3abcd\\) will also be non-negative since \\(a\\), \\(b\\), \\(c\\), and \\(d\\) are non-negative.\n\n### Right Side Analysis (RS)\nThe right side is \n\n\\[\n\\frac{1}{2} \\sum_{cyc} a^3(b + c + d) = \\frac{1}{2} \\left( a^3(b+c+d) + b^3(c+a+d) + c^3(a+b+d) + d^3(a+b+c) \\right).\n\\]\n\nThis expression is essentially the sum of products of a variable cubed and the sum of the other variables.\n\n### Comparing Both Sides\nTo find the relationship between the left side and the right side:\n\n1. **Use known inequalities or identities** to evaluate both sides. For instance, using the AM-GM inequality might help assess the left side and see if it can be less than or equal to the right.\n\n2. **Consider specific cases** where \\(a = b = c = d\\). Let\u2019s take \\(a = b = c = d = x\\):\n\n   - Left Side (LS):\n     \\[\n     LS = x^4 + 2x^4 + 3x^4 + x^4 + 3x^4 = 7x^4.\n     \\]\n\n   - Right Side (RS):\n     \\[\n     RS = \\frac{1}{2} \\cdot (x^3(3x)) = \\frac{3}{2}x^4.\n     \\]\n\n   Thus, we find \n\n   \\[\n   LS = 7x^4 \\quad \\text{and} \\quad RS = \\frac{3}{2}x^4,\n   \\]\n   leading to \\(7x^4 \\geq \\frac{3}{2}x^4\\), confirming \\(x^4\\) cancels out.\n\n3. **Testing boundary cases**: \n   - Let \\(x\\) take the extreme of \\(0\\) or other combinations \\( (0, 1, 1, 1) \\) to check if the relationship holds.\n\n4. **General Observations**: The structure suggests that as long as all variables are non-negative, the left side sums are likely to dominate due to the mix of fourth powers and cross-terms versus the expression on the right which is largely cubic.\n\n### Conclusion\nAfter analyzing specific cases, especially when variables take on equal values, we find that the left side tends to be greater than or equal to the right side. \n\nHence, we conclude that \n\n\\[\n\\boxed{\\geq}\n\\]\n\nThus, the appropriate completion for the inequality is:\n\n```\n'The answer is (B) \u2265'\n```\n",
+    "success": true,
+    "error": null
+}

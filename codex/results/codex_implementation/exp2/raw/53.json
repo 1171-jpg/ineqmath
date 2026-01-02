@@ -1,0 +1,22 @@
+{
+    "data_id": "53",
+    "problem": "Let $a, b, c > 0$ be positive real numbers such that $a b c = 1$. Consider the following inequality:\n$$\n\\frac{a b}{a^2+b^2+\\sqrt{c}}+\\frac{b c}{b^2+c^2+\\sqrt{a}}+\\frac{c a}{c^2+a^2+\\sqrt{b}} \\quad () \\quad \\frac{3}{2}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(D) $<$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c > 0$ be positive real numbers such that $a b c = 1$. Consider the following inequality:\n$$\n\\frac{a b}{a^2+b^2+\\sqrt{c}}+\\frac{b c}{b^2+c^2+\\sqrt{a}}+\\frac{c a}{c^2+a^2+\\sqrt{b}} \\quad () \\quad \\frac{3}{2}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the inequality\n\n\\[\n\\frac{a b}{a^2+b^2+\\sqrt{c}}+\\frac{b c}{b^2+c^2+\\sqrt{a}}+\\frac{c a}{c^2+a^2+\\sqrt{b}} \\quad () \\quad \\frac{3}{2},\n\\]\n\ngiven the condition \\( abc = 1 \\), we can apply the AM-GM (Arithmetic Mean-Geometric Mean) inequality.\n\n### Steps:\n\n1. **Apply AM-GM Inequality**:\n   Each term in the denominator can be estimated using AM-GM:\n   \\[\n   a^2 + b^2 + \\sqrt{c} \\geq 3 \\sqrt[3]{a^2 b^2 \\sqrt{c}} = 3 \\sqrt[3]{(abc)^{2/3}} = 3 \\sqrt[3]{1^{2/3}} = 3.\n   \\]\n\n   Therefore,\n   \\[\n   a^2 + b^2 + \\sqrt{c} \\geq 3.\n   \\]\n\n2. **Simplifying Each Fraction**:\n   Substituting this result into our fractions yields:\n   \\[\n   \\frac{a b}{a^2 + b^2 + \\sqrt{c}} \\leq \\frac{a b}{3} \\quad \\text{(and similarly for the other terms)}.\n   \\]\n \n   Thus,\n   \\[\n   \\frac{a b}{a^2 + b^2 + \\sqrt{c}} + \\frac{b c}{b^2 + c^2 + \\sqrt{a}} + \\frac{c a}{c^2 + a^2 + \\sqrt{b}} \\leq \\frac{a b}{3} + \\frac{b c}{3} + \\frac{c a}{3}.\n   \\]\n\n3. **Using the Condition**:\n   Now observe that:\n   \\[\n   \\frac{a b}{3} + \\frac{b c}{3} + \\frac{c a}{3} = \\frac{1}{3} (ab + bc + ca).\n   \\]\n\n4. **Applying AM-GM Again**:\n   By the AM-GM inequality,\n   \\[\n   ab + bc + ca \\geq 3\\sqrt[3]{(abc)^2} = 3\\sqrt[3]{1} = 3.\n   \\]\n   This gives us:\n   \\[\n   \\frac{ab + bc + ca}{3} \\geq 1.\n   \\]\n\n5. **Final Inequality**:\n   Hence,\n   \\[\n   \\frac{1}{3} (ab + bc + ca) \\geq \\frac{3}{3} = 1.\n   \\]\n\n   Therefore,\n   \\[\n   \\frac{a b}{3} + \\frac{b c}{3} + \\frac{c a}{3} \\geq 1.\n   \\]\n\n6. **Combining Results**:\n   Therefore,\n   \\[\n   \\frac{a b}{a^2 + b^2 + \\sqrt{c}} + \\frac{b c}{b^2 + c^2 + \\sqrt{a}} + \\frac{c a}{c^2 + a^2 + \\sqrt{b}} \\leq 1 < \\frac{3}{2}.\n   \\]\n\n### Conclusion:\nThis shows that the original inequality is true in the sense that:\n\n\\[\n\\frac{a b}{a^2+b^2+\\sqrt{c}}+\\frac{b c}{b^2+c^2+\\sqrt{a}}+\\frac{c a}{c^2+a^2+\\sqrt{b}} \\leq \\frac{3}{2}.\n\\]\n\nThus, the correct option to fill in the blank is:\n\n```plaintext\n'The answer is (A) $\\leq$'\n```\n",
+    "success": true,
+    "error": null
+}

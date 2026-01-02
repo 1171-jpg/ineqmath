@@ -1,0 +1,22 @@
+{
+    "data_id": "77",
+    "problem": "Let $a, b, c > 0$ be positive real numbers. Consider the following inequality:\n$$\n\\frac{a^2}{a^2+bc} + \\frac{b^2}{b^2+ca} + \\frac{c^2}{c^2+ba} \\quad () \\quad \\frac{(a+b+c)^2}{2(ab+bc+ca)}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(A) $\\leq$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c > 0$ be positive real numbers. Consider the following inequality:\n$$\n\\frac{a^2}{a^2+bc} + \\frac{b^2}{b^2+ca} + \\frac{c^2}{c^2+ba} \\quad () \\quad \\frac{(a+b+c)^2}{2(ab+bc+ca)}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the inequality problem involving positive real numbers \\( a, b, c \\), we'll analyze the expression \n\n\\[\n\\frac{a^2}{a^2+bc} + \\frac{b^2}{b^2+ca} + \\frac{c^2}{c^2+ab}\n\\]\n\nand compare it to \n\n\\[\n\\frac{(a+b+c)^2}{2(ab+bc+ca)}.\n\\]\n\n### Step 1: Understanding the Left Side\n\nWe rewrite the left-hand side:\n\n\\[\n\\frac{a^2}{a^2 + bc} = 1 - \\frac{bc}{a^2 + bc}.\n\\]\n\nThus, we have:\n\n\\[\nS = \\frac{a^2}{a^2 + bc} + \\frac{b^2}{b^2 + ca} + \\frac{c^2}{c^2 + ab} = 3 - \\left( \\frac{bc}{a^2 + bc} + \\frac{ca}{b^2 + ca} + \\frac{ab}{c^2 + ab} \\right).\n\\]\n\n### Step 2: Putting it Together\n\nNow, we can apply Titu's lemma (an application of Cauchy-Schwarz inequality) directly to the left-hand side. By applying Titu's lemma, we get:\n\n\\[\n\\frac{a^2}{a^2 + bc} + \\frac{b^2}{b^2 + ca} + \\frac{c^2}{c^2 + ab} \\leq \\frac{(a+b+c)^2}{(a^2 + bc) + (b^2 + ca) + (c^2 + ab)}.\n\\]\n\n### Step 3: Finding the Denominator\n\nCalculating the denominator:\n\n\\[\n= a^2 + b^2 + c^2 + ab + bc + ca.\n\\]\n\nNotice that, by the rearrangement inequality and the AM-GM inequality:\n\n\\[\na^2 + b^2 + c^2 \\geq ab + ac + bc.\n\\]\n\nHence, we also have:\n\n\\[\na^2 + b^2 + c^2 + ab + bc + ca \\geq 3 \\sqrt[3]{(abc)^2} + 3 \\sqrt[3]{abc} = \\frac{3 \\cdot 2 \\sqrt[3]{(abc)^2}}.\n\\]\n\nThus, the left-hand side simplifies further.\n\n### Step 4: Conclusion\n\nNow, putting all parts together, we conclude:\n\n\\[\n\\frac{(a+b+c)^2}{(a+b+c)^2 + ab + bc + ca} \\leq \\frac{(a+b+c)^2}{2(ab+bc+ca)}.\n\\]\n\nThis shows that\n\n\\[\n\\frac{a^2}{a^2 + bc} + \\frac{b^2}{b^2 + ca} + \\frac{c^2}{c^2 + ab} \\leq \\frac{(a+b+c)^2}{2(ab+bc+ca)}.\n\\]\n\nTherefore, the correct inequality relation is:\n\n\\[\n\\frac{a^2}{a^2 + bc} + \\frac{b^2}{b^2 + ca} + \\frac{c^2}{c^2 + ab} \\leq \\frac{(a+b+c)^2}{2(ab+bc+ca)}.\n\\]\n\n### Final Answer\n\nThus, the answer is \n\n``'The answer is (A) $\\leq$'```\n",
+    "success": true,
+    "error": null
+}

@@ -1,0 +1,22 @@
+{
+    "data_id": "81",
+    "problem": "Let $a_1, a_2, \\ldots, a_n$ be real numbers such that $a_1 + a_2 + \\ldots + a_n = 0$ and $\\max \\{|a_i - a_j| \\mid 1 \\leq i, j \\leq n\\} \\leq 1$. Consider the following expression:\n$$\na_1^2 + a_2^2 + \\ldots + a_n^2 \\quad () \\quad \\frac{1}{n}\\left[\\frac{n}{2}\\right]\\left[\\frac{n+1}{2}\\right] \n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(A) $\\leq$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a_1, a_2, \\ldots, a_n$ be real numbers such that $a_1 + a_2 + \\ldots + a_n = 0$ and $\\max \\{|a_i - a_j| \\mid 1 \\leq i, j \\leq n\\} \\leq 1$. Consider the following expression:\n$$\na_1^2 + a_2^2 + \\ldots + a_n^2 \\quad () \\quad \\frac{1}{n}\\left[\\frac{n}{2}\\right]\\left[\\frac{n+1}{2}\\right] \n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the problem, we need to analyze the conditions given and determine the correct inequality relating the sum of squares of \\( a_1, a_2, \\ldots, a_n \\) to the given expression.\n\n1. **Understanding the Expressions**: \n\n   We have:\n   \\[\n   S = a_1^2 + a_2^2 + \\ldots + a_n^2\n   \\]\n\n   We're interested in comparing \\( S \\) with:\n   \\[\n   \\frac{1}{n}\\left[\\frac{n}{2}\\right]\\left[\\frac{n+1}{2}\\right]\n   \\]\n\n2. **Applying the Given Conditions**:\n\n   - **Condition 1**: \\( a_1 + a_2 + \\ldots + a_n = 0 \\) implies that the numbers balance around zero.\n   - **Condition 2**: \\( \\max \\{|a_i - a_j| \\mid 1 \\leq i, j \\leq n\\} \\leq 1 \\) indicates that the values \\( a_i \\) are constrained within a range of 1 unit.\n\n3. **Bounding the Sum of Squares**:\n\n   Since \\( |a_i - a_j| \\leq 1 \\) for all \\( i, j \\), we have:\n   - If we assume \\( a_i \\) achieves a maximum value \\( M \\) and a minimum value \\( m \\), then:\n   \\[\n   M - m \\leq 1 \\quad \\Rightarrow \\quad M \\leq m + 1\n   \\]\n   And because \\( a_1 + a_2 + \\ldots + a_n = 0 \\), we can also derive that the average is in bounds that affect the sum of squares.\n\n4. **Using the Cauchy-Schwarz Inequality**:\n\n   From the Cauchy-Schwarz inequality:\n   \\[\n   (a_1^2 + a_2^2 + \\ldots + a_n^2)(1 + 1 + \\ldots + 1) \\geq (a_1 + a_2 + \\ldots + a_n)^2 \n   \\]\n   We simplify this to: \n   \\[\n   S \\cdot n \\geq 0 \\quad \\Rightarrow \\quad S \\geq 0\n   \\]\n\n5. **Calculating the Bound**:\n\n   Given that \\( |a_i| \\leq |a_j| + 1 \\) and with the zero-sum condition, a useful consideration is the case where all \\( a_i = 0 \\), and slight deviations around this point will keep \\( |a_i| \\) within bounds of 0 and 1. \n\n   The total variance of such bounded numbers leads us to compare:\n   \\[\n   S \\leq \\frac{n}{4} \\quad (\\text{derived from the variance of the distribution})\n   \\]\n\n6. **Finding the Expression on the Right**:\n\n   Now, let's simplify:\n   \\[\n   \\frac{1}{n} \\cdot \\frac{n}{2} \\cdot \\frac{n+1}{2} = \\frac{n(n + 1)}{4n} = \\frac{n + 1}{4}\n   \\]\n\n7. **Conclusion**:\n\n   After analyzing, we conclude:\n   - The maximum sum of squares \\( S \\) cannot exceed the values described by the expression on the right due to the constraints provided in the problem.\n\nThus, we find:\n\\[\na_1^2 + a_2^2 + \\ldots + a_n^2 \\leq \\frac{1}{n}\\left[\\frac{n}{2}\\right]\\left[\\frac{n+1}{2}\\right]\n\\]\n\nSo, the correct inequality is:\n\n'\"'The answer is (A) $\\leq$'\"'\n",
+    "success": true,
+    "error": null
+}

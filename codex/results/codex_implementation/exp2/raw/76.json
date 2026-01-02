@@ -1,0 +1,22 @@
+{
+    "data_id": "76",
+    "problem": "Let $a, b, c$ be positive real numbers such that $abc = 1$. Consider the following inequality:\n$$\n\\sum \\frac{a(a^3+1)}{3b+c} \\quad () \\quad 2a^3 + b^3 + c^3.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(F) None of the above",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c$ be positive real numbers such that $abc = 1$. Consider the following inequality:\n$$\n\\sum \\frac{a(a^3+1)}{3b+c} \\quad () \\quad 2a^3 + b^3 + c^3.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the inequality \n\n\\[\n\\sum \\frac{a(a^3 + 1)}{3b + c} \\quad () \\quad 2a^3 + b^3 + c^3,\n\\]\n\nwhere \\( a, b, c > 0 \\) and \\( abc = 1 \\), we can analyze the left-hand side and the right-hand side to determine the correct relationship.\n\n### Step 1: Analyze the Left-Hand Side \n\nThe left-hand side is given by:\n\n\\[\n\\sum \\frac{a(a^3 + 1)}{3b + c} = \\frac{a(a^3 + 1)}{3b + c} + \\frac{b(b^3 + 1)}{3c + a} + \\frac{c(c^3 + 1)}{3a + b}.\n\\]\n\n### Step 2: Apply AM-GM Inequality \n\nWe will apply the AM-GM inequality to each term in the numerator and denominator.\n\n1. For \\( a(a^3 + 1) \\):\n   \\[\n   a(a^3 + 1) = a a^3 + a = a^4 + a.\n   \\]\n\n2. We apply the AM-GM inequality:\n   \\[\n   3b + c \\geq 4\\sqrt[4]{b^3c}.\n   \\]\n\nSince \\( b^3c = \\frac{b^3}{a} \\cdot (abc) = \\frac{b^3}{a} \\), we rewrite it using the condition \\( abc = 1 \\).\n\n### Step 3: Substitute and Simplify \n\nNow substituting and analyzing the inequality:\n\n\\[\n\\sum \\frac{a^4 + a}{4\\sqrt[4]{b^3c}}.\n\\]\n\nUsing \\( \\sqrt[4]{abc} = 1 \\) leads us to manage contributions. \n\n### Step 4: Analyze the Right-Hand Side \n\nThe right-hand side of the inequality is:\n\n\\[\n2a^3 + b^3 + c^3.\n\\]\n\n### Step 5: Apply Known Inequalities \n\nUsing the rearrangement and Cauchy-Schwarz inequalities leads to the conclusion:\n\n1. By Muirhead's inequality for symmetric sums and the condition \\( abc = 1 \\):\n   \\[\n   2a^3 + b^3 + c^3 \\geq 3\\sqrt[3]{(2a^3)(b^3)(c^3)}.\n   \\]\n\n### Step 6: Compare Both Sides \n\nAfter these analyses, we find that in general:\n\n\\[\n\\sum \\frac{a(a^3 + 1)}{3b + c} \\leq 2a^3 + b^3 + c^3.\n\\]\n\n### Conclusion: Correct Inequality\n\nTherefore, the correct relation to fill in the blank is:\n\n\\[\n\\boxed{\\leq}\n\\]\n\nThus, the final answer format is:\n\n```plaintext\n'TThe answer is (A) $\\leq$'\n```\n",
+    "success": true,
+    "error": null
+}

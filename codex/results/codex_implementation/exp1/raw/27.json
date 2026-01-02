@@ -1,0 +1,14 @@
+{
+    "data_id": "27",
+    "problem": "Let $x, y$ be positive real numbers such that $x + y = 2$. Determine the smallest constant $C$ such that the following inequality holds for all $x, y$:\n\n$$\nx^3 y^3 (x^3 + y^3) \\leq C.\n$$",
+    "answer": "$C = 2$",
+    "type": "bound",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is $C=X$', where X is your calculated numerical bound value. Example: 'The answer is $C=1$'.\n\nProblem: Let $x, y$ be positive real numbers such that $x + y = 2$. Determine the smallest constant $C$ such that the following inequality holds for all $x, y$:\n\n$$\nx^3 y^3 (x^3 + y^3) \\leq C.\n$$\n\nSolution:",
+    "response": "To solve the problem, we need to find the smallest constant \\( C \\) such that the inequality \n\n\\[\nx^3 y^3 (x^3 + y^3) \\leq C\n\\]\n\nholds for all positive \\( x \\) and \\( y \\) such that \\( x + y = 2 \\).\n\n**Step 1: Express \\( y \\) in terms of \\( x \\)**\n\nGiven \\( x + y = 2 \\), we can express \\( y \\) as:\n\n\\[\ny = 2 - x\n\\]\n\n**Step 2: Substitute \\( y \\) into the inequality**\n\nNow, substituting \\( y \\) into the inequality gives:\n\n\\[\nx^3 (2 - x)^3 (x^3 + (2 - x)^3)\n\\]\n\n**Step 3: Simplify the expression**\n\nNext, we need to simplify both \\( (2 - x)^3 \\) and \\( x^3 + (2 - x)^3 \\):\n\n1. Expand \\( (2 - x)^3 \\):\n\n\\[\n(2 - x)^3 = 8 - 12x + 6x^2 - x^3\n\\]\n\n2. Now calculate \\( x^3 + (2 - x)^3 \\):\n\n\\[\nx^3 + (2 - x)^3 = x^3 + 8 - 12x + 6x^2 - x^3 = 8 - 12x + 6x^2\n\\]\n\n**Step 4: Set the full expression**\n\nNow, substitute back:\n\n\\[\nx^3 (2 - x)^3 (8 - 12x + 6x^2)\n\\]\n\nThis leads to:\n\n\\[\nx^3 (8 - 12x + 6x^2)(8 - 12x + 6x^2)\n\\]\n\n**Step 5: Evaluate critical points**\n\nTo determine \\( C \\), we must find the maximum value of the expression \n\n\\[\nx^3 (2 - x)^3 (8 - 12x + 6x^2)\n\\]\n\nover the interval \\( 0 < x < 2 \\).\n\n**Step 6: Use symmetry and substitute \\( x = 1 \\)**\n\nBy symmetry in the problem (since \\( x + y = 2 \\)), we can evaluate at \\( x = 1 \\):\n\n\\[\ny = 1 \\implies x^3 y^3 (x^3 + y^3) = 1^3 \\cdot 1^3 (1^3 + 1^3) = 1 \\cdot 1 \\cdot 2 = 2\n\\]\n\n**Step 7: Test endpoints and explore behavior**\n\nNow, consider endpoints:\n1. As \\( x \\to 0 \\) or \\( x \\to 2 \\):\n   - The expression tends to 0 because \\( x^3 \\) or \\( y^3 \\) will be 0.\n\n**Conclusion: Maximum Value**\n\nThe maximum occurs at \\( x = 1 \\) leading to:\n\n\\[\nx^3 y^3 (x^3 + y^3) \\text{ is maximized at } C = 2\n\\]\n\nThus, the smallest constant \\( C \\) that satisfies the inequality for all \\( x, y \\) is:\n\n```plaintext\n'The answer is $C=2$'\n```\n",
+    "success": true,
+    "error": null
+}

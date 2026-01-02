@@ -1,0 +1,22 @@
+{
+    "data_id": "52",
+    "problem": "Let $a, b, c \\in (0,1)$. Consider the following inequality:\n$$\n\\sqrt{a b c} + \\sqrt{(1-a)(1-b)(1-c)} \\quad () \\quad 1.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(D) $<$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c \\in (0,1)$. Consider the following inequality:\n$$\n\\sqrt{a b c} + \\sqrt{(1-a)(1-b)(1-c)} \\quad () \\quad 1.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "Let's analyze the given expression and inequality step by step.\n\nWe need to evaluate the inequality:\n\n\\[\n\\sqrt{abc} + \\sqrt{(1-a)(1-b)(1-c)} \\quad () \\quad 1\n\\]\n\nwhere \\( a, b, c \\in (0, 1) \\).\n\n### Step 1: Analyze the terms\n\n1. **Term 1: \\( \\sqrt{abc} \\)**\n\n   Since \\( a, b, c \\in (0, 1) \\), we know that:\n   \\[\n   0 < abc < 1 \\implies 0 < \\sqrt{abc} < 1\n   \\]\n\n2. **Term 2: \\( \\sqrt{(1-a)(1-b)(1-c)} \\)**\n\n   Since \\( a, b, c \\in (0, 1) \\), it follows that \\( 1-a, 1-b, 1-c \\) are also in the range \\( (0, 1) \\). Therefore:\n   \\[\n   0 < (1-a)(1-b)(1-c) < 1 \\implies 0 < \\sqrt{(1-a)(1-b)(1-c)} < 1\n   \\]\n\n### Step 2: Combine the terms\n\nWhen we add these two terms, we have:\n\n\\[\n\\sqrt{abc} + \\sqrt{(1-a)(1-b)(1-c)} < 1 + 1 = 2\n\\]\n\n### Step 3: Determine bounds\n\nNow let's examine the specific maximum value for the sum \\( \\sqrt{abc} + \\sqrt{(1-a)(1-b)(1-c)} \\):\n\n- The maximum value for each square root term is \\( 1 \\), but they can't each reach \\( 1 \\) simultaneously because of their strict inequalities (since if one is nearing 1, the other must be nearing 0).\n\nThus, their exact sum could be at most close to \\( 1 \\) but never equal to or exceed \\( 1 \\).\n\n### Step 4: Conclusion\n\nBased on these observations:\n\n- When \\( a, b, c \\) take extreme values (close to 0 or 1), the sum \\( \\sqrt{abc} + \\sqrt{(1-a)(1-b)(1-c)} \\) approaches \\( 1 \\) but doesn't equal or exceed \\( 1 \\). \n\nHence, the correct inequality to fill in the blank is:\n\n\\[\n\\sqrt{abc} + \\sqrt{(1-a)(1-b)(1-c)} < 1\n\\]\n\nThus, the answer is:\n\n```\n'The answer is (D) <'\n```\n",
+    "success": true,
+    "error": null
+}

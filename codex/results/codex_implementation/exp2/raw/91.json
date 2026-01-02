@@ -1,0 +1,22 @@
+{
+    "data_id": "91",
+    "problem": "In an acute triangle $ABC$, consider the following inequality:\n$$\n\\frac{\\cos A}{\\cos B \\cos C} + \\frac{\\cos B}{\\cos C \\cos A} + \\frac{\\cos C}{\\cos A \\cos B} \\quad () \\quad 3\\left(\\frac{1}{1+\\cos A} + \\frac{1}{1+\\cos B} + \\frac{1}{1+\\cos C}\\right).\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(B) $\\geq$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: In an acute triangle $ABC$, consider the following inequality:\n$$\n\\frac{\\cos A}{\\cos B \\cos C} + \\frac{\\cos B}{\\cos C \\cos A} + \\frac{\\cos C}{\\cos A \\cos B} \\quad () \\quad 3\\left(\\frac{1}{1+\\cos A} + \\frac{1}{1+\\cos B} + \\frac{1}{1+\\cos C}\\right).\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the problem, we need to analyze the inequality given within the acute triangle \\( ABC \\). \n\n### Step 1: Analyze the Left Hand Side (LHS)\nThe LHS of the inequality is:\n\\[\n\\frac{\\cos A}{\\cos B \\cos C} + \\frac{\\cos B}{\\cos C \\cos A} + \\frac{\\cos C}{\\cos A \\cos B}\n\\]\n\n### Step 2: Analyze the Right Hand Side (RHS)\nThe RHS of the inequality is:\n\\[\n3\\left(\\frac{1}{1+\\cos A} + \\frac{1}{1+\\cos B} + \\frac{1}{1+\\cos C}\\right)\n\\]\n\n### Step 3: Applying Known Inequalities\nTo relate the two sides, we might utilize known inequalities involving angles in triangles:\n\n1. **Using the Cosine Rule:** In an acute triangle, we know that \\( \\cos A + \\cos B + \\cos C > 0 \\).\n2. **Jensen's Inequality:** The function \\( f(x) = \\frac{1}{1+\\cos x} \\) is convex on \\( (0, \\frac{\\pi}{2}) \\) (which covers the angles in an acute triangle). \n3. **Applying Jensen's Inequality:**\n\n   Applying Jensen\u2019s inequality, we get:\n   \\[\n   \\frac{1}{1+\\cos A} + \\frac{1}{1+\\cos B} + \\frac{1}{1+\\cos C} \\geq 3 \\cdot \\frac{1}{1 + \\frac{\\cos A + \\cos B + \\cos C}{3}}\n   \\]\n\n### Step 4: Relate LHS and RHS\nWe shall show:\n\\[\n\\frac{\\cos A}{\\cos B \\cos C} + \\frac{\\cos B}{\\cos C \\cos A} + \\frac{\\cos C}{\\cos A \\cos B} \\geq 3\\cdot\\frac{1}{1+\\cos A} + 3\\cdot\\frac{1}{1+\\cos B} + 3\\cdot\\frac{1}{1+\\cos C}\n\\]\n\n### Step 5: Prove the Inequality\nGiven that the inequalities for cosines in acute triangles provide bounds for ratios of cosines, we find that:\n- The LHS tends to be larger due to the terms involving reciprocation of the product of cosines, while the RHS is the mean of three smaller components.\n\n### Conclusion\nFrom the analysis, we conclude that:\n\\[\n\\frac{\\cos A}{\\cos B \\cos C} + \\frac{\\cos B}{\\cos C \\cos A} + \\frac{\\cos C}{\\cos A \\cos B} \\geq 3\\left(\\frac{1}{1+\\cos A} + \\frac{1}{1+\\cos B} + \\frac{1}{1+\\cos C}\\right)\n\\]\nThus, the correct option to fill in the blank is (B) \\(\\geq\\).\n\n### Final Answer\nTherefore, the solution to the given inequality is:\n```\nThe answer is (B) \u2265\n```\n",
+    "success": true,
+    "error": null
+}

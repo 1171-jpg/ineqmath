@@ -1,0 +1,14 @@
+{
+    "data_id": "5",
+    "problem": "Let $x, y, z$ be positive real numbers such that $x+y+z=1$. Determine the largest constant $C$ such that the following inequality holds for all $x, y, z$:\n\n$$\n(x+\\frac{1}{x})(y+\\frac{1}{y})(z+\\frac{1}{z}) \\geq C.\n$$",
+    "answer": "$C = \\frac{1000}{27}$",
+    "type": "bound",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is $C=X$', where X is your calculated numerical bound value. Example: 'The answer is $C=1$'.\n\nProblem: Let $x, y, z$ be positive real numbers such that $x+y+z=1$. Determine the largest constant $C$ such that the following inequality holds for all $x, y, z$:\n\n$$\n(x+\\frac{1}{x})(y+\\frac{1}{y})(z+\\frac{1}{z}) \\geq C.\n$$\n\nSolution:",
+    "response": "To find the largest constant \\( C \\) such that \n\n\\[\n(x+\\frac{1}{x})(y+\\frac{1}{y})(z+\\frac{1}{z}) \\geq C\n\\]\n\nfor positive real numbers \\( x, y, z \\) satisfying \\( x+y+z=1 \\), we can start by examining the expression \\( x + \\frac{1}{x} \\).\n\n### Step 1: Analyze \\( x + \\frac{1}{x} \\)\n\nThe function \\( f(t) = t + \\frac{1}{t} \\) is defined for \\( t > 0 \\). Its first derivative is:\n\n\\[\nf'(t) = 1 - \\frac{1}{t^2}\n\\]\n\nSetting \\( f'(t) = 0 \\) gives us critical points at \\( t = 1 \\). The second derivative is:\n\n\\[\nf''(t) = \\frac{2}{t^3}\n\\]\n\nSince \\( f''(t) > 0 \\) for \\( t > 0 \\), it indicates that \\( f(t) \\) is convex. The minimum value occurs at \\( t = 1 \\):\n\n\\[\nf(1) = 1 + 1 = 2\n\\]\n\n### Step 2: Applying the AM-GM Inequality\n\nUsing the AM-GM inequality:\n\n\\[\n\\frac{x + \\frac{1}{x} + y + \\frac{1}{y} + z + \\frac{1}{z}}{3} \\geq \\sqrt[3]{(x+\\frac{1}{x})(y+\\frac{1}{y})(z+\\frac{1}{z})}\n\\]\n\nBy applying the AM-HM inequality:\n\n\\[\n\\frac{x+y+z}{3} \\geq \\frac{3}{\\frac{1}{x}+\\frac{1}{y}+\\frac{1}{z}}\n\\]\nGiven \\( x + y + z = 1 \\), it implies:\n\n\\[\n\\frac{1}{3} \\geq \\frac{3}{\\sum_{cyc} \\frac{1}{x}} \\Rightarrow \\sum_{cyc} \\frac{1}{x} \\geq 9\n\\]\n\nThus, the minimum value of \\( x + \\frac{1}{x} \\) is 2. Hence:\n\n\\[\n(x + \\frac{1}{x})(y + \\frac{1}{y})(z + \\frac{1}{z}) \\geq 2 \\cdot 2 \\cdot 2 = 8\n\\]\n\n### Step 3: Setting \\( C \\)\n\nTo conclude, the largest constant \\( C \\) for which the inequality holds for all positive reals \\( x, y, z \\) such that \\( x + y + z = 1 \\) is \\( C = 8 \\).\n\nThe final answer is:\n\n''The answer is $C=8$''\n",
+    "success": true,
+    "error": null
+}

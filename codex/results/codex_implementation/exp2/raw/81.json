@@ -1,0 +1,22 @@
+{
+    "data_id": "81",
+    "problem": "Let $a_1, a_2, \\ldots, a_n$ be real numbers such that $a_1 + a_2 + \\ldots + a_n = 0$ and $\\max \\{|a_i - a_j| \\mid 1 \\leq i, j \\leq n\\} \\leq 1$. Consider the following expression:\n$$\na_1^2 + a_2^2 + \\ldots + a_n^2 \\quad () \\quad \\frac{1}{n}\\left[\\frac{n}{2}\\right]\\left[\\frac{n+1}{2}\\right] \n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(A) $\\leq$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a_1, a_2, \\ldots, a_n$ be real numbers such that $a_1 + a_2 + \\ldots + a_n = 0$ and $\\max \\{|a_i - a_j| \\mid 1 \\leq i, j \\leq n\\} \\leq 1$. Consider the following expression:\n$$\na_1^2 + a_2^2 + \\ldots + a_n^2 \\quad () \\quad \\frac{1}{n}\\left[\\frac{n}{2}\\right]\\left[\\frac{n+1}{2}\\right] \n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To tackle the problem, we'll analyze the given conditions and the expression step by step.\n\n### Given Conditions\n1. **Sum Condition**: \\( a_1 + a_2 + \\ldots + a_n = 0 \\)\n2. **Difference Condition**: \\( \\max \\{|a_i - a_j| \\mid 1 \\leq i, j \\leq n\\} \\leq 1 \\)\n\nFrom the difference condition, it follows that all \\( a_i \\)'s must lie within the range \\([M, M+1]\\) for some real number \\( M \\).\n\n### Step 1: Use Cauchy-Schwarz Inequality\n\nApplying the Cauchy-Schwarz inequality to the terms \\( a_1, a_2, \\ldots, a_n \\):\n\n\\[\n(a_1^2 + a_2^2 + \\ldots + a_n^2)(1 + 1 + \\ldots + 1) \\geq (a_1 + a_2 + \\ldots + a_n)^2\n\\]\n\nThis simplifies to:\n\n\\[\n(a_1^2 + a_2^2 + \\ldots + a_n^2) n \\geq 0\n\\]\n\n### Step 2: Bound the Expression\n\nNext, we want to analyze \\( a_1^2 + a_2^2 + \\ldots + a_n^2 \\):\n\nSince \\( a_i \\)'s are constrained by their maximum difference being at most 1, we can derive bounds for \\( a_i \\) based on their average, which is zero (since they sum up to zero):\n\n- Assume \\( a_i = x_i - C \\) where \\( C = \\frac{1}{n}(a_1 + a_2 + \\ldots + a_n) = 0 \\).\n  \nThus, \\( |a_i| \\leq \\frac{1}{2} \\) to keep the maximum difference constraint intact.\n\n### Step 3: Calculate the Maximum Total Squared Value\n\nTo bound \\( a_1^2 + a_2^2 + \\ldots + a_n^2 \\):\n\n- The maximum occurs when some \\( a_i \\) are at \\( \\frac{1}{2} \\) and others at \\( -\\frac{1}{2} \\).\n  \n### Step 4: Total Squares Calculation\n\nIf there are \\( k \\) values of \\( \\frac{1}{2} \\) and \\( n-k \\) values of \\( -\\frac{1}{2} \\), then:\n\n\\[\na_1^2 + a_2^2 + \\ldots + a_n^2 = k\\left(\\frac{1}{4}\\right) + (n - k)\\left(\\frac{1}{4}\\right) = \\frac{n}{4}\n\\]\n\n### Step 5: Compare to the Right Side\n\nNow, calculate:\n\n\\[\n\\frac{1}{n}\\left[\\frac{n}{2}\\right]\\left[\\frac{n+1}{2}\\right]\n\\]\n\nThis evaluates as follows (for ease, assume \\( n \\) is even, say \\( n = 2m \\)):\n\n\\[\n\\frac{1}{n}\\left[m\\right]\\left[m + \\frac{1}{2}\\right] = \\frac{m^2 + \\frac{m}{2}}{2m} = \\frac{m}{2} + \\frac{1}{4}\n\\]\n\n### Final Inequality Assessment\n\nWe need to establish whether:\n\n\\[\n\\frac{n}{4} \\quad \\text{is } \\quad \\frac{n}{4} \\left( (A) \\leq, (B) \\geq, (C) =, (D) <, (E) >, (F) \\text{None of the above} \\right)\n\\]\n\nFrom our analysis and calculating \\( a_1^2 + a_2^2 + \\ldots + a_n^2 \\), it aligns precisely:\n\n\\[\na_1^2 + a_2^2 + \\ldots + a_n^2 = \\frac{n}{4}\n\\]\n\nThus, we conclude that:\n\n\\[\n\\frac{n}{4} = \\frac{1}{n} \\left[\\frac{n}{2}\\right]\\left[\\frac{n+1}{2}\\right]\n\\]\n\n### Conclusion\n\nThe correct inequality relation is:\n\n``'The answer is (C) ='``\n",
+    "success": true,
+    "error": null
+}

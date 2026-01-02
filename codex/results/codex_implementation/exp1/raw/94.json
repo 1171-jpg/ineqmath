@@ -1,0 +1,22 @@
+{
+    "data_id": "94",
+    "problem": "Let $a, b > 0$ be positive real numbers such that $a + b + \\sqrt{a^2 + b^2} \\leq 10$. Consider the following inequality:\n$$\n\\frac{1}{a} + \\frac{2}{b} \\quad () \\quad 1.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(B) $\\geq$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b > 0$ be positive real numbers such that $a + b + \\sqrt{a^2 + b^2} \\leq 10$. Consider the following inequality:\n$$\n\\frac{1}{a} + \\frac{2}{b} \\quad () \\quad 1.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the problem, we want to analyze the relationship between the inequality \\( \\frac{1}{a} + \\frac{2}{b} \\) and \\( 1 \\), given the constraint \\( a + b + \\sqrt{a^2 + b^2} \\leq 10 \\).\n\n### Step 1: Understanding the Constraint\n\nStarting with the constraint:\n\n\\[\na + b + \\sqrt{a^2 + b^2} \\leq 10\n\\]\n\nWe can isolate \\( \\sqrt{a^2 + b^2} \\):\n\n\\[\n\\sqrt{a^2 + b^2} \\leq 10 - (a + b)\n\\]\n\n### Step 2: Bounding \\( \\sqrt{a^2 + b^2} \\)\n\nUsing the identity \\( \\sqrt{a^2 + b^2} \\geq \\sqrt{2ab} \\) (by the Cauchy-Schwarz inequality):\n\n\\[\n\\sqrt{2ab} \\leq 10 - (a + b)\n\\]\n\nSquaring both sides gives:\n\n\\[\n2ab \\leq (10 - a - b)^2\n\\]\n\nExpanding the right side:\n\n\\[\n2ab \\leq 100 - 20a - 20b + a^2 + 2ab + b^2\n\\]\n\nSubtract \\( 2ab \\) from both sides:\n\n\\[\n0 \\leq 100 - 20a - 20b + a^2 + b^2\n\\]\n\nRearranging yields:\n\n\\[\na^2 + b^2 - 20a - 20b + 100 \\geq 0\n\\]\n\n### Step 3: Analyzing the Expression \n\nNow, let's analyze \\( \\frac{1}{a} + \\frac{2}{b} \\). To find a lower bound for this expression, we can apply the method of Lagrange multipliers or testing critical points.\n\n### Step 4: Using the Cauchy-Schwarz Inequality\n\nApplying the Cauchy-Schwarz Inequality for the terms \\( \\frac{1}{a} + \\frac{2}{b} \\):\n\n\\[\n(\\frac{1}{a} + \\frac{2}{b})(a + b) \\geq (1 + 2)^2 = 9\n\\]\n\nThis implies:\n\n\\[\n\\frac{1}{a} + \\frac{2}{b} \\geq \\frac{9}{a + b}\n\\]\n\nNow, we also know from our constraint:\n\n\\[\na + b \\leq 10 - \\sqrt{a^2 + b^2}\n\\]\n\nThus the minimum condition \\( a + b \\) can lead us to higher values for the fractional terms.\n\n### Step 5: Final Steps\n\nWe conclude \\( \\frac{1}{a} + \\frac{2}{b} \\) will approach values larger than 1 as \\( a \\) and \\( b \\) are such that the constraint holds.\n\n### Result\n\nThus, the direction of the inequality is:\n\n\\[\n\\frac{1}{a} + \\frac{2}{b} \\geq 1\n\\]\n\nThe answer is:\n\n```\n'The answer is (B) \u2265'\n```\n",
+    "success": true,
+    "error": null
+}

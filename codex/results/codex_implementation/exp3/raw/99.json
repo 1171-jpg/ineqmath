@@ -1,0 +1,22 @@
+{
+    "data_id": "99",
+    "problem": "Let $a, b, c \\geq 0$ be non-negative real numbers such that $a^2 + b + c^2 = 1$. Consider the following inequality:\n$$\n\\frac{1}{1+a^2} + \\frac{1}{3(1+b)} + \\frac{1}{1+c^2} \\quad () \\quad \\frac{7}{4}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(F) None of the above",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c \\geq 0$ be non-negative real numbers such that $a^2 + b + c^2 = 1$. Consider the following inequality:\n$$\n\\frac{1}{1+a^2} + \\frac{1}{3(1+b)} + \\frac{1}{1+c^2} \\quad () \\quad \\frac{7}{4}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the problem, we want to analyze the inequality:\n\n\\[\n\\frac{1}{1+a^2} + \\frac{1}{3(1+b)} + \\frac{1}{1+c^2} \\quad () \\quad \\frac{7}{4}\n\\]\n\ngiven the constraint \\(a^2 + b + c^2 = 1\\) with \\(a, b, c \\geq 0\\).\n\n### Step 1: Analyze Individual Components\n1. **Term \\( \\frac{1}{1+a^2} \\)**:\n   - As \\(a^2\\) increases, \\( \\frac{1}{1+a^2} \\) decreases. \n   - \\(a^2\\) ranges from \\(0\\) to \\(1\\) (inclusive), giving:\n     - \\( \\frac{1}{1+0} = 1\\) when \\(a = 0\\)\n     - \\( \\frac{1}{1+1} = \\frac{1}{2}\\) when \\(a = 1\\)\n\n2. **Term \\( \\frac{1}{3(1+b)} \\)**:\n   - As \\(b\\) increases, \\( \\frac{1}{3(1+b)} \\) decreases.\n   - \\(b\\) can vary from \\(0\\) to \\(1\\):\n     - \\( \\frac{1}{3(1+0)} = \\frac{1}{3}\\) when \\(b = 0\\)\n     - \\( \\frac{1}{3(1+1)} = \\frac{1}{6}\\) when \\(b = 1\\)\n\n3. **Term \\( \\frac{1}{1+c^2} \\)**:\n   - Similar analysis as \\( \\frac{1}{1+a^2} \\), \\(c^2\\) varies from \\(0\\) to \\(1\\):\n     - \\( \\frac{1}{1+0} = 1\\) when \\(c = 0\\)\n     - \\( \\frac{1}{1+1} = \\frac{1}{2}\\) when \\(c = 1\\)\n\n### Step 2: Bound the Sum\nSince \\(a^2 + b + c^2 = 1\\), we need to find upper limits for \\(a^2\\), \\(b\\), and \\(c^2\\) under this constraint.\n\n#### Case Exploration\n1. **Case \\(a^2 = 1, b = 0, c^2 = 0\\)**:\n   \\[\n   \\frac{1}{1+1} + \\frac{1}{3(1+0)} + \\frac{1}{1+0} = \\frac{1}{2} + \\frac{1}{3} + 1 = \\frac{1}{2} + \\frac{1}{3} + \\frac{3}{3} = \\frac{13}{6} \\approx 2.16 > \\frac{7}{4}\n   \\]\n\n2. **Case \\(a^2 = 0, b = 1, c^2 = 0\\)**:\n   \\[\n   \\frac{1}{1+0} + \\frac{1}{3(1+1)} + \\frac{1}{1+0} = 1 + \\frac{1}{6} + 1 = 2 + \\frac{1}{6} = \\frac{13}{6} > \\frac{7}{4}\n   \\]\n\n3. **Case \\(a^2 = 0, b = 0, c^2 = 1\\)**:\n   \\[\n   \\frac{1}{1+0} + \\frac{1}{3(1+0)} + \\frac{1}{1+1} = 1 + \\frac{1}{3} + \\frac{1}{2} = 1 + \\frac{2}{6} + \\frac{3}{6} = \\frac{25}{12} \\approx 2.08 > \\frac{7}{4}\n   \\]\n\n### Step 3: Corner Cases\nTrying equal distributions of \\(a, b, c\\):\n- If \\(a^2 = c^2 = b = \\frac{1}{4}\\):\n\\[\na^2 + 2b + c^2 = 1 \\sep b = 0 \\quad \\Rightarrow \\quad a^2 = 1 \\rightarrow ...\n\\]\n\n### Conclusion\nFrom explorations, the maximum reached in acceptable cases generally surpasses \\(\\frac{7}{4}\\). Hence, the correct inequality to fill in the blank is:\n\n\\[\n\\frac{1}{1+a^2} + \\frac{1}{3(1+b)} + \\frac{1}{1+c^2} \\geq \\frac{7}{4}\n\\]\n\nThus, the answer is:\n\n```\n'The answer is (B) \u2265'\n```\n",
+    "success": true,
+    "error": null
+}

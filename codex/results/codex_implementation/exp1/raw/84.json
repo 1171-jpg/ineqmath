@@ -1,0 +1,22 @@
+{
+    "data_id": "84",
+    "problem": "Let $a, b, c$ be positive real numbers such that $a + b + c = 1$. Consider the following inequality:\n$$\na \\sqrt[3]{1+b-c} + b \\sqrt[3]{1+c-a} + c \\sqrt[3]{1+a-b} \\quad () \\quad 1.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(A) $\\leq$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c$ be positive real numbers such that $a + b + c = 1$. Consider the following inequality:\n$$\na \\sqrt[3]{1+b-c} + b \\sqrt[3]{1+c-a} + c \\sqrt[3]{1+a-b} \\quad () \\quad 1.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "We are given the inequality involving positive real numbers \\(a\\), \\(b\\), and \\(c\\) such that \\(a + b + c = 1\\), and we want to analyze:\n\n\\[\na \\sqrt[3]{1+b-c} + b \\sqrt[3]{1+c-a} + c \\sqrt[3]{1+a-b} \\quad () \\quad 1\n\\]\n\n**Step 1: Understanding the Expression**\n\nWe recognize \\(1+b-c\\), \\(1+c-a\\), and \\(1+a-b\\) can be rewritten:\n\n- Since \\(c = 1 - a - b\\), we have:\n  - \\(1 + b - c = 1 + b - (1 - a - b) = a + 2b\\)\n  - \\(1 + c - a = 1 + (1 - a - b) - a = 2 - 2a - b\\)\n  - \\(1 + a - b = 1 + a - b = 1 + a - b\\)\n\nThus, we can rewrite our expression as:\n\n\\[\na \\sqrt[3]{a + 2b} + b \\sqrt[3]{2 - 2a - b} + c \\sqrt[3]{1+a-b}\n\\]\n\n**Step 2: Analyze the Bound**\n\nWe evaluate if the left-hand side can exceed, meet, or be less than 1 under the given constraints. \n\n**Step 3: Applying Cauchy-Schwarz Inequality**\n\nUsing the Cauchy-Schwarz inequality in the following form:\n- For non-negative reals \\(x_1, x_2, \\ldots, x_n\\) and \\(y_1, y_2,\\ldots, y_n\\):\n\n\\[\n\\left( \\sum_{i=1}^n x_i y_i \\right)^2 \\leq \\left( \\sum_{i=1}^n x_i^2 \\right) \\left( \\sum_{i=1}^n y_i^2 \\right)\n\\]\n\nWe apply Cauchy-Schwarz to:\n\n\\[\n\\left( a \\sqrt[3]{1+b-c} + b \\sqrt[3]{1+c-a} + c \\sqrt[3]{1+a-b} \\right)^2 \\leq (a^2 + b^2 + c^2) \\left( (1+b-c)^{2/3} + (1+c-a)^{2/3} + (1+a-b)^{2/3} \\right)\n\\]\n\nFor \\( a+b+c = 1 \\):\n\n1. Using **AM-GM Inequality** for positive \\(a, b, c\\) confirms \\(a^2 + b^2 + c^2 \\leq (a+b+c)^2 = 1\\).\n\n2. We notice evaluations lead towards getting bounds but focusing must shift toward sums of cube roots.\n\n**Step 4: Examine Special Cases**\n\nLet's examine \\(a = b = c = \\frac{1}{3}\\):\n\n\\[\n\\text{then,}\\\\\na + b + c = 1 \\\\\na \\sqrt[3]{1+b-c} + b \\sqrt[3]{1+c-a} + c \\sqrt[3]{1+a-b} = 3 \\cdot \\frac{1}{3} \\sqrt[3]{1 + \\frac{1}{3} - \\frac{1}{3}} = \\sqrt[3]{1} = 1\n\\]\n\nThis suffices to show equality can be achieved when \\(a = b = c\\).\n\n**Conclusion**\n\nThe determined relation is that the left-hand side can indeed be equal to \\(1\\) under appropriate pairings of \\(a, b, c\\). Thus the inequality does not exceed or go less than:\n\n\\[\n\\Rightarrow \\text{Therefore, the answer is } \\boxed{C}.\n\\]\n\nThus, putting it in the required format:\n\n```\n'The answer is (C) $=$'\n```\n",
+    "success": true,
+    "error": null
+}

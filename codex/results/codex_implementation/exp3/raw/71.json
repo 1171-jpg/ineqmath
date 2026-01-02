@@ -1,0 +1,22 @@
+{
+    "data_id": "71",
+    "problem": "Let $a, b, c$ be positive real numbers. Consider the following inequality:\n$$\n\\sum_{cyc} \\frac{b+c}{\\sqrt{(a+b)(a+c)}} \\quad () \\quad 2 \\sum_{cyc} \\frac{2a}{2b+c}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(D) $<$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c$ be positive real numbers. Consider the following inequality:\n$$\n\\sum_{cyc} \\frac{b+c}{\\sqrt{(a+b)(a+c)}} \\quad () \\quad 2 \\sum_{cyc} \\frac{2a}{2b+c}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the inequality problem, we need to analyze the expression:\n\n$$\n\\sum_{cyc} \\frac{b+c}{\\sqrt{(a+b)(a+c)}}\n$$\n\nand compare it with \n\n$$\n2 \\sum_{cyc} \\frac{2a}{2b+c}.\n$$\n\n### Step 1: Understanding the Cyclic Sum\n\nThe cyclic sum means we will evaluate the expression for all cyclic permutations of \\(a, b, c\\):\n\n- The first term, \\(\\sum_{cyc} \\frac{b+c}{\\sqrt{(a+b)(a+c)}}\\), can be rewritten as:\n  \n  \\[\n  \\frac{b+c}{\\sqrt{(a+b)(a+c)}} + \\frac{c+a}{\\sqrt{(b+c)(b+a)}} + \\frac{a+b}{\\sqrt{(c+a)(c+b)}}\n  \\]\n\n### Step 2: Comparing the two expressions\n\nTo derive a useful comparison between the two expressions, we can explore their behavior under certain conditions:\n\n1. Setting \\(a = b = c\\):\n   - Both sides simplify and show equality.\n   \n2. Setting \\(a \\geq b = c\\):\n   - We need to evaluate if the left-hand side is greater than or equal to the right-hand side.\n  \nThis method gives insights into how the terms behave under certain limits.\n\n### Step 3: Applying Cauchy-Schwarz Inequality\n\nUsing the Cauchy-Schwarz inequality:\n\n\\[\n\\left( \\sum_{cyc} \\frac{b+c}{\\sqrt{(a+b)(a+c)}} \\right)^2 \\leq \\left( \\sum_{cyc} (b+c) \\right) \\left( \\sum_{cyc} \\frac{1}{(a+b)(a+c)} \\right)\n\\]\n\nThis can lead to bounds over positive variables. \n\n### Step 4: Testing Cases\n\nTesting edge cases provides guidance:\n\nSetting \\(a\\), \\(b\\), and \\(c\\) with specific relationships, such as:\n- All equal\n- Two equal, one distinct\n- All distinct but in specific ratios\n\n### Final Comparison\n\nAfter analyzing the cyclic sums and their resulting values under the Cauchy-Schwarz inequality, it can be conjectured that:\n\n\\[\n\\sum_{cyc} \\frac{b+c}{\\sqrt{(a+b)(a+c)}} \\quad \\geq \\quad 2 \\sum_{cyc} \\frac{2a}{2b+c}\n\\]\n\nThis leads to the conclusion that the correct comparison to fill in the blank in the inequality is:\n\n**Answer:**\n'\"'\"'The answer is (B) $\\geq$'\"'\"'\n",
+    "success": true,
+    "error": null
+}

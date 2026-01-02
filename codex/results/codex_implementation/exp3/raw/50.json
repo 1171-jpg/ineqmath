@@ -1,0 +1,22 @@
+{
+    "data_id": "50",
+    "problem": "Let $a, b, c \\geq 0$ be non-negative real numbers such that $a + b + c = 1$. Consider the following inequality:\n$$\n7(ab + bc + ca) \\quad () \\quad 3 + 9abc.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(D) $<$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c \\geq 0$ be non-negative real numbers such that $a + b + c = 1$. Consider the following inequality:\n$$\n7(ab + bc + ca) \\quad () \\quad 3 + 9abc.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the inequality \\( 7(ab + bc + ca) \\) and determine its relationship with \\( 3 + 9abc \\) under the constraint \\( a + b + c = 1 \\) (where \\( a, b, c \\geq 0 \\)), we will follow these steps:\n\n### Step 1: Analyze the expressions\n\n1. Since \\( a, b, c \\geq 0 \\) and \\( a + b + c = 1 \\):\n   - \\( ab + bc + ca \\) can be maximized and minimized under these constraints.\n   - \\( abc \\) will also vary accordingly.\n\n### Step 2: Apply known inequalities\n\n2. We can use the identity:\n   \\[\n   (a + b + c)^2 = a^2 + b^2 + c^2 + 2(ab + ac + bc)\n   \\]\n   Hence,\n   \\[\n   1 = a^2 + b^2 + c^2 + 2(ab + ac + bc)\n   \\]\n   Rearranging gives:\n   \\[\n   ab + ac + bc = \\frac{1 - (a^2 + b^2 + c^2)}{2}\n   \\]\n\n### Step 3: Estimate maximum values\n\n3. To explore the maximum of \\( ab + ac + bc \\):\n   - By the Cauchy-Schwarz inequality:\n   \\[\n   (a + b + c)^2 \\geq 3(ab + ac + bc)\n   \\]\n   thus:\n   \\[\n   1 \\geq 3(ab + ac + bc) \\Rightarrow ab + ac + bc \\leq \\frac{1}{3}\n   \\]\n\n4. Therefore:\n   \\[\n   7(ab + ac + bc) \\leq 7 \\cdot \\frac{1}{3} = \\frac{7}{3}\n   \\]\n\n### Step 4: Analyze the term \\( 3 + 9abc \\)\n\n5. For \\( abc \\):\n   - Let \\( a = x, b = y, c = 1 - x - y \\):\n   \\[\n   abc = xy(1 - x - y)\n   \\]\n   - The maximum value of \\( abc \\) will occur at specific values of \\( a, b, c \\).\n   - Using symmetry, for maximum \\( abc \\), we can assume \\( a = b = c \\), i.e., \\( a = b = c = \\frac{1}{3} \\):\n   \\[\n   abc = \\left(\\frac{1}{3}\\right)^3 = \\frac{1}{27}\n   \\]\n   It gives:\n   \\[\n   3 + 9abc = 3 + 9 \\cdot \\frac{1}{27} = 3 + \\frac{1}{3} = \\frac{10}{3}\n   \\]\n\n### Step 5: Comparing the two sides\n\n6. We now have:\n   \\[\n   7(ab + ac + bc) \\leq \\frac{7}{3} \\quad \\text{and} \\quad 3 + 9abc = \\frac{10}{3}\n   \\]\n   Thus, we observe:\n   \\[\n   \\frac{7}{3} < \\frac{10}{3}\n   \\]\n\n### Conclusion\n\nTherefore, the correct relation to fill in the blank is:\n\n\\[\n7(ab + ac + bc) < 3 + 9abc\n\\]\n\nThus:\n\n```\n'The answer is (D) <'\n```\n",
+    "success": true,
+    "error": null
+}

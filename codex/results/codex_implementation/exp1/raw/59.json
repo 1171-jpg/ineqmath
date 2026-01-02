@@ -1,0 +1,22 @@
+{
+    "data_id": "59",
+    "problem": "Let $x, y, z \\in \\mathbb{R}$ such that $x^2 + 2y^2 + z^2 = \\frac{2}{5} a^2$, where $a > 0$. Consider the following expression:\n$$\n|x - y + z| \\quad () \\quad a.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(A) $\\leq$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $x, y, z \\in \\mathbb{R}$ such that $x^2 + 2y^2 + z^2 = \\frac{2}{5} a^2$, where $a > 0$. Consider the following expression:\n$$\n|x - y + z| \\quad () \\quad a.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the problem, we need to analyze the expression \\( |x - y + z| \\) under the constraint given by the equation \\( x^2 + 2y^2 + z^2 = \\frac{2}{5} a^2 \\).\n\n**Step 1: Use Cauchy-Schwarz Inequality**\n\nWe apply the Cauchy-Schwarz inequality in the context of the variables \\( x, y, z \\):\n\n\\[\n(x - y + z)^2 \\leq (1^2 + 1^2 + 1^2)(x^2 + y^2 + z^2)\n\\]\n\nThis simplifies to:\n\n\\[\n(x - y + z)^2 \\leq 3(x^2 + y^2 + z^2)\n\\]\n\n**Step 2: Relate \\( y \\) to \\( a \\)**\n\nGiven \\( x^2 + 2y^2 + z^2 = \\frac{2}{5} a^2 \\), we can relate \\( y^2 \\) in terms of the other variables relative to \\( a \\). First, rewrite it as:\n\n\\[\nx^2 + z^2 + 2y^2 = \\frac{2}{5}a^2.\n\\]\n\n**Step 3: Analyze Bounds for \\(|x - y + z|\\)**\n\nWe can assess \\( |x - y + z| \\) directly. We rewrite:\n\n\\[\n|x - y + z| = |(x + z) - y|.\n\\]\n\nUsing the triangle inequality:\n\n\\[\n|x + z| \\leq |x| + |z| \\quad \\text{and} \\quad |y| = \\sqrt{y^2} \\leq \\sqrt{2y^2}.\n\\]\n\nThus:\n\n\\[\n|x - y + z| \\leq |x + z| + |y| \\leq |x| + |z| + \\sqrt{2y^2}.\n\\]\n\nBy substituting \\( x^2 + 2y^2 + z^2 \\):\n\n\\[\n|x - y + z| \\leq \\sqrt{3 \\left(x^2 + z^2 + 2y^2\\right)} \\leq \\sqrt{3 \\cdot \\frac{2}{5} a^2} = \\sqrt{\\frac{6}{5}} a.\n\\]\n\n**Conclusion and Comparison**\n\nNow, we compare \\( |x - y + z| \\) with \\( a \\):\n\n\\[\n|x - y + z| \\leq \\sqrt{\\frac{6}{5}} a.\n\\]\n\nSince \\(\\sqrt{\\frac{6}{5}} < \\sqrt{2}\\) which is approximately \\( 1.225 \\), we see that \\( |x - y + z| \\) is indeed less than \\( a \\). Therefore, the inequality is established:\n\n**Final Result:**\n\nBased on the analysis, we fill in the blank with:\n\n```plaintext\n'The answer is (A) $\\leq$'\n``` \n\nTherefore, the final stated answer is:\n\n**'The answer is (A) $\\leq$'**\n",
+    "success": true,
+    "error": null
+}

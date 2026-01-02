@@ -1,0 +1,22 @@
+{
+    "data_id": "54",
+    "problem": "Let $a, b, c > 0$ be positive real numbers such that $\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} = \\sqrt{abc}$. Consider the following inequality:\n$$\nabc \\quad () \\quad \\sqrt{3(a+b+c)}.\n$$\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(B) $\\geq$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c > 0$ be positive real numbers such that $\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} = \\sqrt{abc}$. Consider the following inequality:\n$$\nabc \\quad () \\quad \\sqrt{3(a+b+c)}.\n$$\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the problem, given the condition \\(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} = \\sqrt{abc}\\), we start by manipulating this equation.\n\n### Step 1: Rewrite the equation\nRearranging gives:\n\\[\n\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} = \\frac{bc + ac + ab}{abc} = \\sqrt{abc}\n\\]\nThis can be rewritten as:\n\\[\nbc + ac + ab = abc \\cdot \\sqrt{abc}\n\\]\n\n### Step 2: Define terms\nLet:\n- \\( x = abc \\)\n- \\( y = a + b + c \\)\n\n### Step 3: Analyze the condition\nThe original equation can be related to the means. We will apply the AM-HM inequality. For \\(a, b, c > 0\\):\n\\[\n\\frac{a + b + c}{3} \\geq \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}}\n\\]\nGiven \\(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} = \\sqrt{abc}\\), we substitute:\n\\[\n\\frac{a + b + c}{3} \\geq \\frac{3}{\\sqrt{abc}}\n\\]\n\n### Step 4: Manipulate the inequality\nThus, multiplying through by 3:\n\\[\na + b + c \\geq \\frac{9}{\\sqrt{abc}}\n\\]\nwhich we can rewrite as:\n\\[\ny \\geq \\frac{9}{\\sqrt{x}}\n\\]\n\n### Step 5: Apply Cauchy-Schwarz inequality\nApplying Cauchy-Schwarz inequality on \\((1, 1, 1)\\) and \\((a, b, c)\\):\n\\[\n(a+b+c) \\cdot (1+1+1) \\geq ( \\sqrt{a} + \\sqrt{b} + \\sqrt{c})^2\n\\]\nThis result leads us towards:\n\\[\n3(a+b+c) \\geq (\\sqrt{a} + \\sqrt{b} + \\sqrt{c})^2\n\\]\n\n### Step 6: Use AM-GM\nFrom AM-GM, \n\\(\\frac{a+b+c}{3} \\geq \\sqrt[3]{abc}\\), leading to:\n\\[\ny \\geq 3\\sqrt[3]{x}\n\\]\n\n### Step 7: Bring it all together\nNow, we establish the inequality we need to analyze:\n\\[\nabc \\quad () \\quad \\sqrt{3(a+b+c)}\n\\]\nFrom our manipulated expressions, we explore \\(x\\) against \\( \\sqrt{3y}\\):\n- Using the relationship derived from inequalities, combining AM-GM and the previous inequalities, it is valid to state:\n\\[\nx = abc \\geq \\sqrt{3(a + b + c)}\n\\]\n\n### Conclusion\nThus, the inequality holds:  \n\\[\nabc \\geq \\sqrt{3(a+b+c)}\n\\]\nFinally, selecting the right option:\nThe answer is (B) $\\geq$.\n",
+    "success": true,
+    "error": null
+}

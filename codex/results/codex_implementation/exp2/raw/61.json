@@ -1,0 +1,22 @@
+{
+    "data_id": "61",
+    "problem": "Let $x, y, z > 0$ be positive real numbers such that $xy + yz + zx = 1$. Consider the following inequality:\n$$\n\\frac{1}{x+x^3} + \\frac{1}{y+y^3} + \\frac{1}{z+z^3} \\quad () \\quad \\frac{9 \\sqrt{2}}{4}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(E) $>$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $x, y, z > 0$ be positive real numbers such that $xy + yz + zx = 1$. Consider the following inequality:\n$$\n\\frac{1}{x+x^3} + \\frac{1}{y+y^3} + \\frac{1}{z+z^3} \\quad () \\quad \\frac{9 \\sqrt{2}}{4}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the inequality\n\n\\[\n\\frac{1}{x+x^3} + \\frac{1}{y+y^3} + \\frac{1}{z+z^3} \\quad () \\quad \\frac{9 \\sqrt{2}}{4}\n\\]\n\nwhere \\( xy + yz + zx = 1 \\) and \\( x, y, z > 0 \\), we proceed as follows:\n\n### Step 1: Normalize Variables\n\nLet \\( x = \\frac{a}{\\sqrt{2}} \\), \\( y = \\frac{b}{\\sqrt{2}} \\), and \\( z = \\frac{c}{\\sqrt{2}} \\) where \\( a, b, c > 0 \\). Then,\n\n\\[\nxy + yz + zx = \\frac{ab + bc + ac}{2} = 1 \\implies ab + ac + bc = 2.\n\\]\n\n### Step 2: Analyze the Expression\n\nThe original expression transforms to:\n\n\\[\n\\frac{1}{\\frac{a}{\\sqrt{2}} + \\left(\\frac{a}{\\sqrt{2}}\\right)^3} = \\frac{1}{\\frac{a + \\frac{a^3}{2\\sqrt{2}}}{\\sqrt{2}}} = \\frac{\\sqrt{2}}{a(1 + \\frac{a^2}{2})}.\n\\]\n\nThus,\n\n\\[\n\\frac{1}{x+x^3} = \\frac{\\sqrt{2}}{a(1 + \\frac{a^2}{2})},\n\\]\n\nand similar transformations hold for \\( y \\) and \\( z \\):\n\n\\[\n\\frac{1}{y+y^3} = \\frac{\\sqrt{2}}{b(1 + \\frac{b^2}{2})}, \\quad \\frac{1}{z+z^3} = \\frac{\\sqrt{2}}{c(1 + \\frac{c^2}{2})}.\n\\]\n\n### Step 3: Combine the Terms\n\nThis leads us to consider the sum:\n\n\\[\n\\frac{\\sqrt{2}}{a(1 + \\frac{a^2}{2})} + \\frac{\\sqrt{2}}{b(1 + \\frac{b^2}{2})} + \\frac{\\sqrt{2}}{c(1 + \\frac{c^2}{2})}.\n\\]\n\n### Step 4: Apply Cauchy-Schwarz Inequality\n\nUsing the Cauchy-Schwarz inequality on the terms:\n\n\\[\n\\left( \\frac{1}{a(1 + \\frac{a^2}{2})} + \\frac{1}{b(1 + \\frac{b^2}{2})} + \\frac{1}{c(1 + \\frac{c^2}{2})} \\right) \\left( a + b + c \\right) \\geq (1+1+1)^2 = 9.\n\\]\n\n### Step 5: Additional Observations\n\nSince \\( ab + ac + bc = 2 \\), and under the AM-GM on \\( \\frac{1 + b}{2} \\) and \\( \\frac{1 + c}{2} \\) and symmetric cases, we want to estimate:\n\n\\[\n\\frac{1}{x+x^3} \\approx \\frac{4 \\sqrt{2}}{9},\n\\]\n\nthus the inequality simplifies to show it bounds:\n\n\\[\n\\frac{1}{x+x^3} + \\frac{1}{y+y^3} + \\frac{1}{z+z^3} \\leq \\frac{9 \\sqrt{2}}{4}.\n\\]\n\n### Conclusion\n\nThe relationship we establish through the transformations and inequalities shows that:\n\n\\[\n\\frac{1}{x+x^3} + \\frac{1}{y+y^3} + \\frac{1}{z+z^3} \\leq \\frac{9 \\sqrt{2}}{4}.\n\\]\n\nThus, the option that appropriately fills the blank is:\n\n**Final Answer**:\n```plaintext\n'TThe answer is (A) \u2264'' \n```\n",
+    "success": true,
+    "error": null
+}

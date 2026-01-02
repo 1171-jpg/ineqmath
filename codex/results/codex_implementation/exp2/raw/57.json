@@ -1,0 +1,22 @@
+{
+    "data_id": "57",
+    "problem": "Given $a, b, c \\geq 0$, consider the following inequality:\n$$\n\\sum_{cyc} \\sqrt{\\frac{a+b}{b^2+4bc+c^2}} \\quad () \\quad \\frac{2}{\\sqrt{a+2b+4c}}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(E) $>$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Given $a, b, c \\geq 0$, consider the following inequality:\n$$\n\\sum_{cyc} \\sqrt{\\frac{a+b}{b^2+4bc+c^2}} \\quad () \\quad \\frac{2}{\\sqrt{a+2b+4c}}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the given inequality problem, we will analyze the expression on the left and the expression on the right.\n\n### Step 1: Understanding the Expression\nWe have:\n$$\n\\sum_{cyc} \\sqrt{\\frac{a+b}{b^2+4bc+c^2}} \\quad \\text{and} \\quad \\frac{2}{\\sqrt{a+2b+4c}}.\n$$\n\nThe left side involves a cyclic sum over three terms (where \\(a, b, c\\) are non-negative).\n\n### Step 2: Testing the Inequality with Symmetric Choices\n1. **Set \\(a = b = c = 1\\)**:\n   - Left side:\n   $$\n   \\sum_{cyc} \\sqrt{\\frac{1+1}{1^2 + 4 \\cdot 1 \\cdot 1 + 1^2}} = \\sum_{cyc} \\sqrt{\\frac{2}{1 + 4 + 1}} = 3 \\sqrt{\\frac{2}{6}} = 3 \\cdot \\frac{1}{\\sqrt{3}} = \\sqrt{3}.\n   $$\n   \n   - Right side:\n   $$\n   \\frac{2}{\\sqrt{1 + 2 \\cdot 1 + 4 \\cdot 1}} = \\frac{2}{\\sqrt{7}}.\n   $$\n\n   We need to check if \\( \\sqrt{3} \\quad ? \\quad \\frac{2}{\\sqrt{7}} \\).\n\n2. **Calculating Numerical Values**:\n   - Using approximate square roots:\n   $$\n   \\sqrt{3} \\approx 1.732 \\quad \\text{and} \\quad \\frac{2}{\\sqrt{7}} \\approx \\frac{2}{2.64575} \\approx 0.755.\n   $$\n\n### Step 3: Checking the Inequality\nFrom the previous calculations, we have:\n1. Left Side: \n   \\( \\sqrt{3} \\approx 1.732 \\)\n   \n2. Right Side: \n   \\( \\frac{2}{\\sqrt{7}} \\approx 0.755 \\)\n\nThus,\n$$\n\\sqrt{3} > \\frac{2}{\\sqrt{7}}.\n$$\n\n### Conclusion\nThe analysis shows that the cyclic sum yields a value greater than \\( \\frac{2}{\\sqrt{a + 2b + 4c}} \\) when \\(a, b, c\\) are equal.\n\n### Final Answer Format\nThus, the correct relation is:\n'The answer is (B) $\\geq$'\n",
+    "success": true,
+    "error": null
+}

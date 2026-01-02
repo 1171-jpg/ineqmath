@@ -1,0 +1,22 @@
+{
+    "data_id": "87",
+    "problem": "Let $a, b, c \\in \\mathbb{R}^{+}$. Consider the following inequality:\n$$\n\\sqrt{\\frac{a+b}{2c}} + \\sqrt{\\frac{b+c}{2a}} + \\sqrt{\\frac{c+a}{b}} \\quad () \\quad \\sqrt{\\frac{8(a+b+c)}{\\sqrt[3]{abc}}}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(F) None of the above",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c \\in \\mathbb{R}^{+}$. Consider the following inequality:\n$$\n\\sqrt{\\frac{a+b}{2c}} + \\sqrt{\\frac{b+c}{2a}} + \\sqrt{\\frac{c+a}{b}} \\quad () \\quad \\sqrt{\\frac{8(a+b+c)}{\\sqrt[3]{abc}}}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the inequality \n\n\\[\n\\sqrt{\\frac{a+b}{2c}} + \\sqrt{\\frac{b+c}{2a}} + \\sqrt{\\frac{c+a}{2b}} \\quad () \\quad \\sqrt{\\frac{8(a+b+c)}{\\sqrt[3]{abc}}}\n\\]\n\nwe will analyze both sides step by step.\n\n### Step 1: Analyze the Left Side\n\nThe left side of the inequality is:\n\n\\[\nL = \\sqrt{\\frac{a+b}{2c}} + \\sqrt{\\frac{b+c}{2a}} + \\sqrt{\\frac{c+a}{2b}}\n\\]\n\nUsing the Cauchy-Schwarz inequality, we have:\n\n\\[\n\\left( \\sqrt{\\frac{a+b}{2c}} + \\sqrt{\\frac{b+c}{2a}} + \\sqrt{\\frac{c+a}{2b}} \\right)^2 \\leq \\left( 1 + 1 + 1 \\right) \\left( \\frac{a+b}{2c} + \\frac{b+c}{2a} + \\frac{c+a}{2b} \\right)\n\\]\n\nThus:\n\n\\[\nL^2 \\leq 3 \\left( \\frac{a+b}{2c} + \\frac{b+c}{2a} + \\frac{c+a}{2b} \\right)\n\\]\n\nNow, we need to simplify the right-hand expression. The expression \\(\\frac{a+b}{2c} + \\frac{b+c}{2a} + \\frac{c+a}{2b}\\) can be bounded using AM-GM as follows:\n\n\\[\n\\frac{a+b}{2c} + \\frac{b+c}{2a} + \\frac{c+a}{2b} \\geq \\frac{2\\sqrt{ab}}{2c} + \\frac{2\\sqrt{bc}}{2a} + \\frac{2\\sqrt{ca}}{2b}\n\\]\n\nBy the AM-GM inequality:\n\n\\[\n\\frac{2\\sqrt{ab}}{2c} + \\frac{2\\sqrt{bc}}{2a} + \\frac{2\\sqrt{ca}}{2b} \\geq \\frac{3\\sqrt[3]{2\\sqrt{ab} \\cdot 2\\sqrt{bc} \\cdot 2\\sqrt{ca}}}{2\\sqrt[3]{abc}} = \\frac{3\\sqrt{abc}}{2\\sqrt[3]{abc}} = \\frac{3\\sqrt[3]{(abc)^2}}{2\\sqrt[3]{abc}} = \\frac{3}{2}\n\\]\n\nThus we have:\n\n\\[\nL^2 \\leq 3 \\cdot \\frac{3}{2} = \\frac{9}{2}\n\\]\n\n### Step 2: Analyze the Right Side\n\nNow let\u2019s analyze the right side:\n\n\\[\nR = \\sqrt{\\frac{8(a+b+c)}{\\sqrt[3]{abc}}}\n\\]\n\n### Step 3: Find Inequality Relation\n\nUsing the AM-GM inequality on the right, we know:\n\n\\[\na+b+c \\geq 3\\sqrt[3]{abc}\n\\]\n\nThis leads to \n\n\\[\n\\frac{8(a+b+c)}{\\sqrt[3]{abc}} \\geq \\frac{8 \\cdot 3\\sqrt[3]{abc}}{\\sqrt[3]{abc}} = 24\n\\]\n\nThen taking square root results in:\n\n\\[\nR \\geq \\sqrt{24} = 2\\sqrt{6}\n\\]\n\nSince we have established that:\n\n\\[\nL^2 \\leq \\frac{9}{2}, \\quad R = 2\\sqrt{6} \\approx 4.899\n\\]\n\n### Conclusion\n\nSince \\(L^2 \\leq \\frac{9}{2} \\approx 4.5\\) and \\(R \\geq 2\\sqrt{6} \\approx 4.899\\), we conclude that:\n\n\\[\n\\sqrt{\\frac{a+b}{2c}} + \\sqrt{\\frac{b+c}{2a}} + \\sqrt{\\frac{c+a}{2b}} < \\sqrt{\\frac{8(a+b+c)}{\\sqrt[3]{abc}}}\n\\]\n\nHence, the correct inequality to fill in the blank is:\n\n**Answer Format:**\n\n'\"'\"'The answer is (D) $<$'\"'\"'\n",
+    "success": true,
+    "error": null
+}

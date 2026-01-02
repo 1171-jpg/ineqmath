@@ -1,0 +1,22 @@
+{
+    "data_id": "52",
+    "problem": "Let $a, b, c \\in (0,1)$. Consider the following inequality:\n$$\n\\sqrt{a b c} + \\sqrt{(1-a)(1-b)(1-c)} \\quad () \\quad 1.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(D) $<$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c \\in (0,1)$. Consider the following inequality:\n$$\n\\sqrt{a b c} + \\sqrt{(1-a)(1-b)(1-c)} \\quad () \\quad 1.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the inequality \n\n\\[\n\\sqrt{abc} + \\sqrt{(1-a)(1-b)(1-c)} \\quad () \\quad 1,\n\\]\n\nwhere \\(a, b, c \\in (0,1)\\), we analyze both terms in the expression.\n\n### Step 1: Bound each term\n\n1. **Bounding \\(\\sqrt{abc}\\)**:\n   - Since \\(a, b, c \\in (0, 1)\\), it follows that \\(abc < 1\\). Therefore, \\(\\sqrt{abc} < 1\\).\n\n2. **Bounding \\(\\sqrt{(1-a)(1-b)(1-c)}\\)**:\n   - Similarly, since \\(1-a, 1-b, 1-c \\in (0, 1)\\), we have \\((1-a)(1-b)(1-c) < 1\\), hence \\(\\sqrt{(1-a)(1-b)(1-c)} < 1\\).\n\n### Step 2: Total maximum value\n\nThe sum of the maximum values of \\(\\sqrt{abc}\\) and \\(\\sqrt{(1-a)(1-b)(1-c)}\\) is:\n\n\\[\n\\sqrt{abc} + \\sqrt{(1-a)(1-b)(1-c)} < 1 + 1 = 2.\n\\]\n\nHowever, since both components are strictly less than 1, we can more carefully analyze their potential sums.\n\n### Step 3: Analyze for extreme cases\n\n**Case 1: When \\(a = b = c = \\frac{1}{2}\\)**\n- We calculate:\n    \\[\n    \\sqrt{abc} = \\sqrt{\\left(\\frac{1}{2}\\right)^3} = \\sqrt{\\frac{1}{8}} = \\frac{1}{2\\sqrt{2}} \\approx 0.354.\n    \\]\n  \n    \\[\n    \\sqrt{(1-a)(1-b)(1-c)} = \\sqrt{\\left(\\frac{1}{2}\\right)^3} = \\frac{1}{2\\sqrt{2}} \\approx 0.354.\n    \\]\n\nThus,\n\n\\[\n\\sqrt{abc} + \\sqrt{(1-a)(1-b)(1-c)} = 0.354 + 0.354 \\approx 0.707 < 1.\n\\]\n\n**Case 2: When \\(a = 1\\), \\(b = 1\\), and \\(c = 1\\)**\n- In this case, both terms become \\(0\\), leading to:\n\\[\n\\sqrt{1} + \\sqrt{0} = 1 + 0 = 1.\n\\]\n\n---\n\n### Conclusion\n\nThrough these bounds and evaluations, we find:\n\n- The sum of \\(\\sqrt{abc}\\) and \\(\\sqrt{(1-a)(1-b)(1-c)}\\) can reach, but never exceed \\(1\\), in the open interval \\( (0,1) \\).\n- Thus, the inequality relation to fill in is:\n\n\\[\n\\sqrt{abc} + \\sqrt{(1-a)(1-b)(1-c)} \\leq 1.\n\\]\n\nSo, the answer is:\n\n```plaintext\n'The answer is (A) $\\leq$'\n```\n",
+    "success": true,
+    "error": null
+}

@@ -1,0 +1,22 @@
+{
+    "data_id": "85",
+    "problem": "Let $a, b, c \\in \\mathbb{R}^{+}$ be positive real numbers. Consider the following inequality:\n$$\n\\frac{a}{\\sqrt{a^2+b^2}} + \\frac{b}{\\sqrt{2b^2+c^2}} + \\frac{c}{\\sqrt{3c^2+a^2}} \\quad () \\quad \\frac{3 \\sqrt{2}}{2}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(D) $<$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c \\in \\mathbb{R}^{+}$ be positive real numbers. Consider the following inequality:\n$$\n\\frac{a}{\\sqrt{a^2+b^2}} + \\frac{b}{\\sqrt{2b^2+c^2}} + \\frac{c}{\\sqrt{3c^2+a^2}} \\quad () \\quad \\frac{3 \\sqrt{2}}{2}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the problem, we need to analyze the given inequality:\n\n\\[\n\\frac{a}{\\sqrt{a^2+b^2}} + \\frac{b}{\\sqrt{2b^2+c^2}} + \\frac{c}{\\sqrt{3c^2+a^2}} \\quad () \\quad \\frac{3 \\sqrt{2}}{2}.\n\\]\n\n### Step 1: Analyze Each Term\n\n- The term \\(\\frac{a}{\\sqrt{a^2 + b^2}}\\) represents the cosine of an angle in a right triangle with sides \\(a\\) and \\(b\\). This value is always in the interval \\((0, 1]\\).\n- Similarly, \\(\\frac{b}{\\sqrt{2b^2 + c^2}}\\) and \\(\\frac{c}{\\sqrt{3c^2 + a^2}}\\) will also yield values in \\((0, 1]\\).\n\nThus, we can conclude:\n\\[\n0 < \\frac{a}{\\sqrt{a^2 + b^2}} \\leq 1, \\quad 0 < \\frac{b}{\\sqrt{2b^2 + c^2}} \\leq 1, \\quad 0 < \\frac{c}{\\sqrt{3c^2 + a^2}} \\leq 1.\n\\]\n\n### Step 2: Assess the Bound for the Sum\n\nSince each of these fractions is less than or equal to 1,\n\\[\n\\frac{a}{\\sqrt{a^2 + b^2}} + \\frac{b}{\\sqrt{2b^2 + c^2}} + \\frac{c}{\\sqrt{3c^2 + a^2}} < 3.\n\\]\n\n### Step 3: Evaluate Special Cases\n\nTo explore the sum more deeply, consider maximizing the terms. A good approach is to assign specific values to \\(a\\), \\(b\\), and \\(c\\):\n- Let \\(a = 1\\), \\(b = 1\\), \\(c = 1\\):\n\\[\n\\frac{1}{\\sqrt{1^2 + 1^2}} + \\frac{1}{\\sqrt{2\\cdot1^2 + 1^2}} + \\frac{1}{\\sqrt{3\\cdot1^2 + 1^2}} = \\frac{1}{\\sqrt{2}} + \\frac{1}{\\sqrt{3}} + \\frac{1}{\\sqrt{4}}.\n\\]\n\nCalculating this gives:\n\\[\n\\frac{1}{\\sqrt{2}} \\approx 0.707, \\quad \\frac{1}{\\sqrt{3}} \\approx 0.577, \\quad \\frac{1}{2} = 0.5.\n\\]\nSo, summing these values:\n\\[\n\\frac{1}{\\sqrt{2}} + \\frac{1}{\\sqrt{3}} + \\frac{1}{2} \\approx 0.707 + 0.577 + 0.5 = 1.784.\n\\]\nComparing \\(1.784\\) to \\(\\frac{3\\sqrt{2}}{2} \\approx 2.121\\) indicates that:\n\n\\[\n1.784 < 2.121.\n\\]\n\n### Conclusion\n\nThrough evaluation and analysis, we find that the left-hand side is consistently less than the right-hand side. Therefore, the correct inequality is:\n\n\\[\n\\frac{a}{\\sqrt{a^2+b^2}} + \\frac{b}{\\sqrt{2b^2+c^2}} + \\frac{c}{\\sqrt{3c^2+a^2}} \\leq \\frac{3 \\sqrt{2}}{2}.\n\\]\n\nThus, the answer is:\n\n```\n'The answer is (A) $\\leq$'\n```\n",
+    "success": true,
+    "error": null
+}

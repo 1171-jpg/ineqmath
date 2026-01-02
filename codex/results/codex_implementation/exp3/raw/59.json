@@ -1,0 +1,22 @@
+{
+    "data_id": "59",
+    "problem": "Let $x, y, z \\in \\mathbb{R}$ such that $x^2 + 2y^2 + z^2 = \\frac{2}{5} a^2$, where $a > 0$. Consider the following expression:\n$$\n|x - y + z| \\quad () \\quad a.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(A) $\\leq$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $x, y, z \\in \\mathbb{R}$ such that $x^2 + 2y^2 + z^2 = \\frac{2}{5} a^2$, where $a > 0$. Consider the following expression:\n$$\n|x - y + z| \\quad () \\quad a.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the problem, we start by analyzing the expression \\( |x - y + z| \\) subject to the constraint \\( x^2 + 2y^2 + z^2 = \\frac{2}{5} a^2 \\).\n\n### Step 1: Understanding the Constraint\n\nThe constraint can be interpreted as describing an ellipsoid centered at the origin. The coefficients of \\(x^2\\), \\(y^2\\), and \\(z^2\\) indicate the axis scaling in each direction:\n\n\\[\n\\frac{x^2}{\\frac{2}{5}a^2} + \\frac{y^2}{\\frac{1}{5}a^2} + \\frac{z^2}{\\frac{2}{5}a^2} = 1\n\\]\n\nThis means that the maximum distances along the \\(x\\), \\(y\\), and \\(z\\) axes are determined by the lengths of the semi-axes of the ellipsoid.\n\n### Step 2: Applying Cauchy-Schwarz Inequality\n\nTo find \\( |x - y + z| \\), we can employ the Cauchy-Schwarz inequality in the following way:\n\n\\[\n(x - y + z)^2 \\leq (1^2 + 1^2 + 1^2)(x^2 + z^2 + y^2)\n\\]\n\nThis gives us:\n\n\\[\n(x - y + z)^2 \\leq 3(x^2 + y^2 + z^2)\n\\]\n\nUsing our constraint, we can rewrite \\(x^2, y^2, z^2\\) as follows:\n\n\\[\nx^2 + y^2 + z^2 \\leq x^2 + 2y^2 + z^2 = \\frac{2}{5} a^2\n\\]\n\n### Step 3: Bounding \\( |x - y + z| \\)\n\nFrom the above inequalities, we get:\n\n\\[\n(x - y + z)^2 \\leq 3\\left(\\frac{2}{5} a^2\\right) = \\frac{6}{5} a^2\n\\]\n\nTaking the square root gives us:\n\n\\[\n|x - y + z| \\leq \\sqrt{\\frac{6}{5}} a\n\\]\n\n### Step 4: Evaluation\n\nNow we need to evaluate the relationship between \\( |x - y + z| \\) and \\( a \\). Given:\n\n\\[\n|x - y + z| \\leq \\sqrt{\\frac{6}{5}} a\n\\]\n\nSince \\( \\sqrt{\\frac{6}{5}} \\) is approximately \\( 1.095 \\), which is greater than \\( 1 \\):\n\n\\[\n|x - y + z| \\text{ could be } > a.\n\\]\n\nHowever, we also need to check if it is strictly bounded by a constant multiple. The key term here is \\(\\sqrt{\\frac{6}{5}}\\), which confirms that the expression \\( |x - y + z| \\) can indeed be greater than or less than \\( a \\) depending on the values of \\(x, y, z\\).\n\n### Conclusion\n\nDespite providing a maximum bound of \\( |x - y + z| \\) through \\(\\sqrt{\\frac{6}{5}} a\\), we cannot universally say this expression will be equal to, greater than, or less than \\(a\\) since it relies on specific values of \\( x, y, z \\). Thus, we can most accurately say that:\n\n**The answer is (A) $\\leq$.**\n",
+    "success": true,
+    "error": null
+}

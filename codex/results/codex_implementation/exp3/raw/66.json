@@ -1,0 +1,22 @@
+{
+    "data_id": "66",
+    "problem": "Let $a, b, c > 0$ be positive real numbers such that\n$$\n\\frac{1}{1+a} + \\frac{1}{1+b} + \\frac{1}{1+c} = 2.\n$$\n\nConsider the following inequality:\n$$\n2(2ab + 3bc + ca) \\quad () \\quad \\sqrt{ab} + \\sqrt{bc} + \\sqrt{ca}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(E) $>$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: Let $a, b, c > 0$ be positive real numbers such that\n$$\n\\frac{1}{1+a} + \\frac{1}{1+b} + \\frac{1}{1+c} = 2.\n$$\n\nConsider the following inequality:\n$$\n2(2ab + 3bc + ca) \\quad () \\quad \\sqrt{ab} + \\sqrt{bc} + \\sqrt{ca}.\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the problem, let's denote \\( S = \\frac{1}{1+a} + \\frac{1}{1+b} + \\frac{1}{1+c} \\). Given \\( S = 2 \\), we can manipulate the terms as follows:\n\n1. **Rewrite the Equation**:\n   \\[\n   S = \\frac{1}{1+a} + \\frac{1}{1+b} + \\frac{1}{1+c} \\Rightarrow 2 = \\frac{(1+b)(1+c) + (1+c)(1+a) + (1+a)(1+b)}{(1+a)(1+b)(1+c)}.\n   \\]\n\n   Simplifying the numerator:\n   \\[\n   (1+b)(1+c) + (1+c)(1+a) + (1+a)(1+b) = 3 + (ab + ac + bc).\n   \\]\n   Therefore,\n   \\[\n   \\frac{3 + (ab + ac + bc)}{(1+a)(1+b)(1+c)} = 2.\n   \\]\n\n2. **Cross-Multiply**:\n   \\[\n   3 + (ab + ac + bc) = 2(1+a)(1+b)(1+c).\n   \\]\n\n3. **Expand the Right Side**:\n   Expanding \\( 2(1+a)(1+b)(1+c) \\) yields:\n   \\[\n   2(1 + a + b + c + ab + ac + bc + abc).\n   \\]\n   Thus, we have:\n   \\[\n   3 + ab + ac + bc = 2 + 2a + 2b + 2c + 2ab + 2ac + 2bc + 2abc.\n   \\] \n\n4. **Rearranging the Terms**:\n   Rearranging gives:\n   \\[\n   1 + ab + ac + bc - 2a - 2b - 2c - 2ab - 2ac - 2bc - 2abc = 0.\n   \\]\n   Which simplifies to:\n   \\[\n   -2(a+b+c+ab+ac+bc) + 1 - 2abc = 0.\n   \\]\n\n5. **Exploring the Inequality**:\n   We need to determine the relationship:\n   \\[\n   2(2ab + 3bc + ca) \\quad () \\quad \\sqrt{ab} + \\sqrt{bc} + \\sqrt{ca}.\n   \\]\n   We will analyze this using the AM-GM inequality.\n\n6. **Apply the AM-GM Inequality**:\n   From AM-GM:\n   \\[\n   \\frac{ab + ab + bc + bc + ca}{5} \\geq \\sqrt[5]{a^2b^2b^2c^2c^2} = \\sqrt[5]{a^2b^3c^2}.\n   \\]\n   Therefore:\n   \\[\n   ab + bc + ca \\geq 3 \\sqrt[3]{abc}.\n   \\]\n   So,\n   \\[\n   2ab + 3bc + ca \\geq 2\\sqrt[3]{abc} + ...,\n   \\]\n   helps in establishing inequalities between terms.\n\n7. **Final Comparison**:\n   Comparing with the right side, using AM-GM:\n   \\[\n   \\sqrt{ab} + \\sqrt{bc} + \\sqrt{ca} \\geq \\sqrt[3]{abc} + ...,\n   \\]\n   leads us to conclude that the left side dominates under certain conditions.\n\nAfter evaluating through careful steps and using AM-GM inequality, the result appears consistent:\n\nThus, based on comparisons and the usage of the inequalities, the answer is:\n```\n'The answer is (A) \u2264'\n```\n",
+    "success": true,
+    "error": null
+}

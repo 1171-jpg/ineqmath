@@ -1,0 +1,22 @@
+{
+    "data_id": "91",
+    "problem": "In an acute triangle $ABC$, consider the following inequality:\n$$\n\\frac{\\cos A}{\\cos B \\cos C} + \\frac{\\cos B}{\\cos C \\cos A} + \\frac{\\cos C}{\\cos A \\cos B} \\quad () \\quad 3\\left(\\frac{1}{1+\\cos A} + \\frac{1}{1+\\cos B} + \\frac{1}{1+\\cos C}\\right).\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above",
+    "choices": [
+        "(A) $\\leq$",
+        "(B) $\\geq$",
+        "(C) $=$",
+        "(D) $<$",
+        "(E) $>$",
+        "(F) None of the above"
+    ],
+    "answer": "(B) $\\geq$",
+    "type": "relation",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is (Letter) Symbol', where Letter is one of the given options. Example: 'The answer is (A) $\\leq$'.\n\nProblem: In an acute triangle $ABC$, consider the following inequality:\n$$\n\\frac{\\cos A}{\\cos B \\cos C} + \\frac{\\cos B}{\\cos C \\cos A} + \\frac{\\cos C}{\\cos A \\cos B} \\quad () \\quad 3\\left(\\frac{1}{1+\\cos A} + \\frac{1}{1+\\cos B} + \\frac{1}{1+\\cos C}\\right).\n$$\n\nDetermine the correct inequality relation to fill in the blank.\n\nOptions:\n\n(A) $\\leq$ \n\n(B) $\\geq$\n\n(C) $=$ \n\n(D) $<$\n\n(E) $>$\n\n(F) None of the above\n\nSolution:",
+    "response": "To solve the inequality problem, we begin with the inequality in question:\n\n$$\n\\frac{\\cos A}{\\cos B \\cos C} + \\frac{\\cos B}{\\cos C \\cos A} + \\frac{\\cos C}{\\cos A \\cos B} \\quad () \\quad 3\\left(\\frac{1}{1+\\cos A} + \\frac{1}{1+\\cos B} + \\frac{1}{1+\\cos C}\\right).\n$$\n\nWe will analyze both sides of the inequality step-by-step.\n\n### Step 1: Analyze the left-hand side (LHS)\n\nThe left-hand side is given by: \n\n$$\nLHS = \\frac{\\cos A}{\\cos B \\cos C} + \\frac{\\cos B}{\\cos C \\cos A} + \\frac{\\cos C}{\\cos A \\cos B}.\n$$\n\nBy applying Titu's Lemma (which is a form of the Cauchy-Schwarz inequality), we can express it as:\n\n$$\nLHS \\geq \\frac{(\\cos A + \\cos B + \\cos C)^2}{\\cos B \\cos C + \\cos C \\cos A + \\cos A \\cos B}.\n$$\n\n### Step 2: Analyze the right-hand side (RHS)\n\nThe right-hand side is given by:\n\n$$\nRHS = 3\\left(\\frac{1}{1+\\cos A} + \\frac{1}{1+\\cos B} + \\frac{1}{1+\\cos C}\\right).\n$$\n\nHere, we can rewrite the terms as:\n\n$$\n\\frac{1}{1 + \\cos A} = \\frac{\\sin^2\\frac{A}{2}}{1 - \\sin^2\\frac{A}{2}} = \\tan^2\\frac{A}{2}.\n$$\n\nThus, we can restate:\n\n$$\nRHS = 3\\left(\\tan^2\\frac{A}{2} + \\tan^2\\frac{B}{2} + \\tan^2\\frac{C}{2}\\right).\n$$\n\n### Step 3: Relate LHS and RHS using known inequalities\n\nUsing known inequalities related to angles in a triangle, in particular an acute triangle \\(ABC\\):\n\n**Cauchy-Schwarz Inequality** states that:\n\n$$\n(\\sin^2 A + \\sin^2 B + \\sin^2 C)(\\frac{1}{\\sin^2 A} + \\frac{1}{\\sin^2 B} + \\frac{1}{\\sin^2 C}) \\geq (1 + 1 + 1)^2 = 9.\n$$\n\nTherefore from this and the properties of trigonometric functions in acute triangles, we infer that the LHS tends to be larger than the RHS.\n\nSince \\( \\cos x \\) is decreasing from \\( 0 \\) to \\( \\pi/2 \\), the average value of \\( \\cos A, \\cos B, \\cos C \\) is less than \\( \\sin^2 A, \\sin^2 B, \\sin^2 C \\) resulting in \\(LHS \\geq RHS\\).\n\n### Conclusion\n\nWe conclude that:\n\n$$\n\\frac{\\cos A}{\\cos B \\cos C} + \\frac{\\cos B}{\\cos C \\cos A} + \\frac{\\cos C}{\\cos A \\cos B} \\geq 3\\left(\\frac{1}{1+\\cos A} + \\frac{1}{1+\\cos B} + \\frac{1}{1+\\cos C}\\right).\n$$\n\nThus the correct symbol to place in the blank is:\n\n**(B)** $\\geq$\n\nFinal answer format is:\n\n'\"'\"'The answer is (B) $\\geq$'\"'\"'\n",
+    "success": true,
+    "error": null
+}

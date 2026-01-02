@@ -1,0 +1,14 @@
+{
+    "data_id": "4",
+    "problem": "Let $a, b, c > 0$ such that $a + b + c = abc$. Determine the largest constant $C$ such that the following inequality holds for all $a, b, c$:\n$$\n\\frac{a}{b^3} + \\frac{b}{c^3} + \\frac{c}{a^3} \\geq C.\n$$",
+    "answer": "$C = 1$",
+    "type": "bound",
+    "data_split": "dev",
+    "solution": [],
+    "theorems": [],
+    "difficulty": "",
+    "prompt": "Task description: Please solve the problem with clear, rigorous, and logically sound steps. At the end of your response, state your answer in exactly this format: 'The answer is $C=X$', where X is your calculated numerical bound value. Example: 'The answer is $C=1$'.\n\nProblem: Let $a, b, c > 0$ such that $a + b + c = abc$. Determine the largest constant $C$ such that the following inequality holds for all $a, b, c$:\n$$\n\\frac{a}{b^3} + \\frac{b}{c^3} + \\frac{c}{a^3} \\geq C.\n$$\n\nSolution:",
+    "response": "To solve the problem, we start by using the condition \\( a + b + c = abc \\). Notice that we can express \\( a, b, c \\) in terms of a common variable. \n\n### Step 1: Use Substitution\n\nLet\u2019s denote:\n\\[\na = \\frac{x}{y}, \\quad b = \\frac{y}{z}, \\quad c = \\frac{z}{x}.\n\\]\n\n### Step 2: Check the Satisfying Condition\n\nNow substitute these into the condition:\n\\[\n\\frac{x}{y} + \\frac{y}{z} + \\frac{z}{x} = \\frac{x}{y} \\cdot \\frac{y}{z} \\cdot \\frac{z}{x} \\implies 1.\n\\]\n\nThis gives us \\( a + b + c = \\frac{x}{y} + \\frac{y}{z} + \\frac{z}{x} \\) and\n\\[\nabc = \\frac{x}{y} \\cdot \\frac{y}{z} \\cdot \\frac{z}{x} = 1.\n\\]\n\n### Step 3: Rewrite the Inequality\n\nWe need to show that:\n\\[\n\\frac{\\frac{x}{y}}{\\left(\\frac{y}{z}\\right)^3} + \\frac{\\frac{y}{z}}{\\left(\\frac{z}{x}\\right)^3} + \\frac{\\frac{z}{x}}{\\left(\\frac{x}{y}\\right)^3} \\geq C.\n\\]\n\nThis simplifies to:\n\\[\n\\frac{xz^3}{y^3} + \\frac{y^4}{xz^3} + \\frac{z^4}{x^3y} \\geq C.\n\\]\n\n### Step 4: Apply the AM-GM Inequality\n\nUsing the AM-GM inequality, we can say that:\n\\[\n\\frac{xz^3}{y^3} + \\frac{y^4}{xz^3} + \\frac{z^4}{x^3y} \\geq 3 \\sqrt[3]{\\frac{xz^3 \\cdot y^4 \\cdot z^4}{y^3 \\cdot xz^3 \\cdot x^3y}} = 3.\n\\]\n\n### Step 5: Find the Constant \\( C \\)\n\nThus, we conclude that:\n\\[\nC \\leq 3.\n\\]\n\n### Step 6: Check for the Equality Condition\n\nThe equality holds when:\n\\[\n\\frac{xz^3}{y^3} = \\frac{y^4}{xz^3} = \\frac{z^4}{x^3y}.\n\\]\nThis scenario happens for \\( a = b = c \\), which satisfies our condition.\n\n### Conclusion\n\nAfter confirming all calculations and logic, we can state:\n\"The answer is $C=3$\".\n",
+    "success": true,
+    "error": null
+}
