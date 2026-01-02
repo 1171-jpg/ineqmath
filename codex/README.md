@@ -1,8 +1,7 @@
 Codex-Style Evaluation for IneqMath
 ===================================
 
-This directory contains a light-weight implementation for evaluating OpenAI
-models on the IneqMath benchmark from within the `codex/` subfolder.
+This directory contains a light-weight implementation for evaluating models on the [IneqMath benchmark](https://arxiv.org/abs/2506.07927) from with Codex CLI intergation.
 
 The implementation:
 - reads IneqMath JSON files (e.g. data/json/dev.json),
@@ -11,41 +10,31 @@ The implementation:
 - verifies correctness (relation / bound),
 - and writes both per-problem results and aggregate scores.
 
-You can treat this as an "OpenAI baseline" for IneqMath in the same spirit as
-the original Codex/GPQA baselines, but adapted to the IneqMath JSON format.
+You can treat this as a Codex-Style Evaluation for IneqMath in the same spirit as
+the original baselines.
 
 --------------------------------------------------
 Directory Layout
 --------------------------------------------------
 
+
+```
 codex/
-├── run_codex_baseline.py        # main driver: run model + score results
-├── scripts/
-│   └── run_ineqmath.sh          # convenience shell script wrapper
-└── (results/)                   # output directory created on first run
-
-- run_codex_baseline.py
-
-  The core script that:
-  * parses command-line arguments,
-  * loads an IneqMath-style JSON file,
-  * builds prompts and calls the model specified by --llm_engine_name,
-  * extracts final answers (for bound / relation),
-  * optionally calls an LLM-based equivalence checker for bound problems,
-  * aggregates scores and writes them to disk.
-
-- scripts/run_ineqmath.sh
-
-  A small helper script that forwards command-line arguments into
-  run_codex_baseline.py so that you can run experiments with a single bash
-  command instead of typing the full Python invocation every time.
-
+├── codex_agent.py       # Core agent class for interacting with Codex CLI
+├── run_codex_baseline.py # Main script for running evaluations
+├── scripts/             # Convenience shell scripts
+│   ├── run_all_codex.sh # Run full evaluation
+│   └── test_codex.sh    # Quick test with limited examples
+├── codex-setup.sh       # CLI installation script
+└── results/             # Generated evaluation outputs (created on run)
+```
 --------------------------------------------------
 Requirements
 --------------------------------------------------
 
-1. Python 3.10+ (or close)
-2. OpenAI Python SDK (version compatible with the rest of the repo)
+1. Node.js: v18+ required for Codex CLI
+2. Codex CLI: Install via `npm install -g @openai/codex`
+4. Python Dependencies: Listed in parent `requirements.txt`(version compatible with the rest of the repo)
 
    Example installation (from the repository root):
 
@@ -58,19 +47,17 @@ Requirements
    or stored in a local .env file that is loaded by dotenv.
 
 4. IneqMath data in JSON format, e.g.:
-
+```
    data/json/
-   ├── train.json
-   ├── dev.json
-   ├── test.json
-   └── theorems.json
-
+   ├── dev.json  # wget https://huggingface.co/datasets/AI4Math/IneqMath/resolve/main/json/dev.json
+   └── test.json
+```
 --------------------------------------------------
 Basic Setup
 --------------------------------------------------
 
 From the repository root:
-
+```bash
   # (optional) create and activate an environment
   # conda create -n ineqmath python=3.10
   # conda activate ineqmath
@@ -81,85 +68,53 @@ From the repository root:
   # make sure OPENAI_API_KEY is set
   export OPENAI_API_KEY=your_api_key_here
 
-There is no requirement for the Node.js Codex CLI in this implementation;
-everything runs through the Python OpenAI client.
+  # Install Codex CLI (if needed)
+  cd codex
+  chmod +x codex-setup.sh
+  ./codex-setup.sh
+  
+  # Verify installation
+  codex --version
+```
 
---------------------------------------------------
-Quick Start (direct Python)
---------------------------------------------------
+## Supported Models
 
-The main entry point is run_codex_baseline.py. A typical call looks like:
+The available models depend on your Codex CLI authentication method.
 
-  python codex/run_codex_baseline.py main       --llm_engine_name gpt-4o-mini       --data_path ./data/json/dev.json       --run_label exp1       --task_prompt ""
+### With OpenAI API Key
 
-This will:
-- read dev.json,
-- evaluate gpt-4o-mini on all problems,
-- write results and scores under:
+| Model Name | Description |
+|------------|-------------|
+| `gpt-4o` | GPT-4o via Codex CLI |
+| `gpt-4o-mini` | GPT-4o-mini via Codex CLI |
+| `gpt-4.1` | GPT-4.1 model |
+| `gpt-4.1-mini` | GPT-4.1-mini model |
+| `o1` | OpenAI o1 reasoning model |
+| `o1-mini` | OpenAI o1-mini model |
+| `o3` | OpenAI o3 reasoning model |
+| `o4-mini` | OpenAI o4-mini model |
 
-  ./results/codex_implementation/exp1/
+**Note**: Check `codex --help` for the latest supported models.
 
 --------------------------------------------------
 Quick Start (bash script)
 --------------------------------------------------
 
 You can also use the bash wrapper under codex/scripts:
+```bash
+# bash codex/scripts/run_ineqmath.sh
 
-  bash codex/scripts/run_ineqmath.sh
+# By default, the script uses:
+# - data_path    = ./data/json/dev.json
+# - llm_engine   = gpt-4o-mini
+# - run_label    = exp1
+# - task_prompt  = ""
 
-By default, the script uses:
-- data_path    = data/json/dev.json
-- llm_engine   = gpt-4o-mini
-- run_label    = exp1
-- task_prompt  = ""
+cd ineqmath
+bash ./codex/scripts/run_all_codex.sh data/json/dev.json gpt-4o-mini exp1
+```
 
-If your script accepts positional arguments, you can override these, e.g.:
 
-  bash codex/scripts/run_ineqmath.sh       data/json/test.json       gpt-4o-mini       exp_gpt4omini_test       ""
-
-(adapt this to match the exact signature of your run_ineqmath.sh).
-
---------------------------------------------------
-Command-Line Arguments
---------------------------------------------------
-
-The key arguments defined in run_codex_baseline.py are:
-
-  --llm_engine_name        OpenAI model name (e.g., gpt-4o-mini).
-                           Default: "gpt-4o-mini"
-
-  --data_path              Path to the IneqMath JSON file.
-                           Default: "./data/json/dev.json"
-
-  --task_prompt            Optional additional task-level instruction
-                           prepended to each problem. Default: ""
-
-  --prompt_dir             Directory containing prompt templates.
-                           Default: "prompts"
-
-  --run_label              Short string used to name the current run.
-                           This becomes the subfolder name under output_path.
-                           Default: "exp1"
-
-  --output_path            Root directory for outputs.
-                           Default: "./results/codex_implementation"
-
-  --max_workers            Number of workers used for parallel scoring.
-                           Default: 16
-
-  --relation_prompt_path   Path to the prompt file used when the model
-                           needs help extracting the relation option.
-                           Default: "./models/prompts/answer_extraction_relation.md"
-
-  --bound_prompt_path      Path to the prompt file used when the model
-                           needs help extracting the numeric/algebraic bound.
-                           Default: "./models/prompts/answer_extraction_bound.md"
-
-  --bound_verification_prompt_path
-                           Path to the prompt file used when calling an LLM
-                           to judge equivalence between the predicted bound
-                           and the ground-truth bound.
-                           Default: "./models/prompts/answer_verification_bound.md"
 
 --------------------------------------------------
 Output Files
@@ -167,67 +122,14 @@ Output Files
 
 For a given run_label (e.g., exp1), outputs are organized as:
 
+```bash
   ./results/codex_implementation/exp1/
-    ├── results.json
-    └── scores.json
+    ├── raw           # folder with raw model responses
+    ├── results.json  # summary model responses within json file
+    └── scores.json   #  Aggregated statistics across the dataset, split by problem type ("bound" / "relation") and an "all" category.
+```
 
-- results.json
 
-  A dictionary keyed by problem id (or data_id). Each entry typically
-  contains:
-  - the original problem,
-  - the model's raw response,
-  - the extracted final answer,
-  - a small evaluation block with flags like is_solved and is_correct.
-
-- scores.json
-
-  Aggregated statistics across the dataset, split by:
-  - data_split (e.g., dev / test),
-  - problem type ("bound" / "relation"),
-  - and an "all" category.
-
-  For each category, you typically see:
-  - total, correct, wrong, empty_responses, accuracy (%).
-
---------------------------------------------------
-High-Level Logic
---------------------------------------------------
-
-At a high level, the pipeline implemented in run_codex_baseline.py does:
-
-1. Load data from --data_path (IneqMath JSON format).
-
-2. For each problem:
-   - build a prompt that includes the inequality question,
-     plus any global instruction (--task_prompt and templates in --prompt_dir),
-   - call the OpenAI model designated by --llm_engine_name,
-   - store the raw response string.
-
-3. Post-process the response to find the final answer:
-   - locate the sentence that contains "answer is" / "final answer",
-     or fall back to the last few lines,
-   - for "relation" problems, map the answer into one of the canonical
-     options:
-       (A) <=, (B) >=, (C) =, (D) <, (E) >, (F) None of the above,
-   - for "bound" problems, extract the candidate bound expression, either
-     by simple pattern matching (e.g., between $...$) or with another
-     LLM prompt (using the bound_prompt_path template).
-
-4. Verify correctness:
-   - relation: direct equality check between the extracted option and
-     the ground-truth option.
-   - bound:
-       * first clean up formatting (remove "$" and whitespace),
-       * if strings are exactly equal, mark correct,
-       * otherwise call an LLM with a strict "equivalence judge" prompt
-         (from bound_verification_prompt_path) to decide if the two
-         expressions are mathematically identical (no rounding, no
-         approximations).
-
-5. Aggregate statistics and save results:
-   - build scores per split and per type,
-   - write a final scores.json alongside the detailed results.json.
 
 --------------------------------------------------
 Troubleshooting
@@ -271,4 +173,23 @@ Notes and Extensions
 
 - If you want to run purely symbolic / numeric equivalence (without using
   an LLM as judge), you can replace verify_bound_answer_with_llm with
-  your own CAS-based checker and keep the rest of the pipeline unchanged.
+  your own matach-based checker and keep the rest of the pipeline unchanged.
+
+--------------------------------------------------
+Citation
+--------------------------------------------------
+If you use this implementation, please cite the GPQA paper:
+
+```bibtex
+@misc{lu2025solvinginequalityproofslarge,
+      title={Solving Inequality Proofs with Large Language Models}, 
+      author={Pan Lu and Jiayi Sheng and Luna Lyu and Jikai Jin and Tony Xia and Alex Gu and James Zou},
+      year={2025},
+      eprint={2506.07927},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2506.07927}, 
+}
+```
+
+This README is inspired by Xuandong Zhao's codex implementation on [GPQA](https://github.com/XuandongZhao/gpqa).
