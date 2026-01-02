@@ -1,13 +1,13 @@
 # Codex-Style Evaluation for IneqMath
 
-This directory contains a Codex-style implementation for evaluating OpenAI GPT models on the **IneqMath** benchmark (“Solving Inequality Proofs with Large Language Models”:contentReference[oaicite:0]{index=0}).
+This directory contains a Codex-style implementation for evaluating OpenAI GPT models on the **IneqMath** benchmark [Solving Inequality Proofs with Large Language Models](https://arxiv.org/abs/2506.07927).
 
 IneqMath recasts inequality proving into two automatically checkable subtasks:
 
 - **Bound Estimation** (`type = "bound"`)
 - **Relation Prediction** (`type = "relation"`)
 
-Our implementation runs models via the **OpenAI Python API** and computes **final-answer accuracy** following the official IneqMath format.:contentReference[oaicite:1]{index=1}  
+Our implementation runs models via the **Codex CLI** and computes **final-answer accuracy** following the official IneqMath format.
 
 ---
 
