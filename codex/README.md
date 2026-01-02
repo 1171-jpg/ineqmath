@@ -178,7 +178,7 @@ Notes and Extensions
 --------------------------------------------------
 Citation
 --------------------------------------------------
-If you use this implementation, please cite the GPQA paper:
+If you use this implementation, please cite the IneqMath paper:
 
 ```bibtex
 @misc{lu2025solvinginequalityproofslarge,
