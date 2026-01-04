@@ -2,22 +2,22 @@
     "dev": {
         "all": {
             "total": 100,
-            "correct": 53,
-            "wrong": 47,
-            "accuracy": 53.0,
+            "correct": 50,
+            "wrong": 50,
+            "accuracy": 50.0,
             "empty_responses": 0
         },
         "bound": {
             "total": 50,
-            "correct": 33,
-            "wrong": 17,
-            "accuracy": 66.0
+            "correct": 32,
+            "wrong": 18,
+            "accuracy": 64.0
         },
         "relation": {
             "total": 50,
-            "correct": 20,
-            "wrong": 30,
-            "accuracy": 40.0
+            "correct": 18,
+            "wrong": 32,
+            "accuracy": 36.0
         }
     }
 }

@@ -396,7 +396,7 @@ def parse_arguments():
     parser.add_argument("--prompt_dir", type=str, default="prompts")
     parser.add_argument("--run_label", type=str, default="exp1")
     parser.add_argument("--output_path", type=str, default="./codex/results/codex_implementation")
-    parser.add_argument("--max_workers", type=int, default=16)
+    parser.add_argument("--max_workers", type=int, default=8)
     parser.add_argument("--relation_prompt_path", type=str, default="./models/prompts/answer_extraction_relation.md")
     parser.add_argument("--bound_prompt_path", type=str, default="./models/prompts/answer_extraction_bound.md")
     parser.add_argument("--bound_verification_prompt_path", type=str, default="./models/prompts/answer_verification_bound.md")
@@ -406,7 +406,7 @@ def parse_arguments():
 if __name__ == "__main__":
     args = parse_arguments()
     import random
-    random.seed(42)
+    random.seed(50)
     # Load dev data
     if os.path.exists(args.data_path):
         with open(args.data_path, "r") as f:
