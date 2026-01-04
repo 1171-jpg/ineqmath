@@ -102,7 +102,6 @@ Quick Start (bash script)
 
 You can also use the bash wrapper under codex/scripts:
 ```bash
-# bash codex/scripts/run_ineqmath.sh
 
 # By default, the script uses:
 # - data_path    = ./data/json/dev.json
